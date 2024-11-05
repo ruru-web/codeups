@@ -1,0 +1,40 @@
+@use 'global' as *;
+
+.button-wrap {
+
+}
+
+.button {
+	position: relative;
+	display: inline-block;
+	padding: rem(16) rem(40);
+	width: rem(202);
+	height: rem(54);
+	font-size: rem(14);
+	line-height: calc(22/14);
+	font-weight: $regular;
+	background-color: $green;
+	color: $white;
+  box-shadow: 0 0 0 0, rem(4) rem(4) 0 0 #fff, rem(4) rem(4) 0 rem(1) $green;
+}
+
+.button::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: rem(40);
+	height: rem(1);
+  background-color: $white;
+	width: rem(40);
+}
+
+.button::after {
+  content: "";
+	position: absolute;
+	top: 43%;
+	right: rem(40);
+	width: rem(10);
+	height: rem(1);
+  transform: rotate(45deg);
+  background-color: $white;
+}

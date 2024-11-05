@@ -1,0 +1,79 @@
+@use 'global' as *;
+
+.campaign-card {
+	width: 100%;
+	max-width: rem(280);
+	height: 100%;
+	background-color: $white;
+	
+}
+
+.campaign-card__image {
+	width: 100%;
+	max-width: rem(280);
+}
+
+.campaign-card__image img {
+	width: 100%;
+	aspect-ratio: 280/188;
+	object-fit: cover;
+}
+
+.campaign-card__body{
+	padding: rem(16);
+}
+
+.campaign-card__tag {
+	display: inline-block;
+	max-width: rem(110);
+	width: 100%;
+	text-align: center;
+	border: rem(1) solid $green;
+	padding-top: rem(4);
+	font-size: rem(12);
+	line-height: calc(22/12);
+	font-weight: $regular;
+}
+
+.campaign-card__title {
+	margin-top: rem(4);
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-weight: $medium;
+}
+
+.campaign-card__text {
+	border-top: rem(1) solid $green;
+	margin-top: rem(8);
+	padding-top: rem(8);
+	text-align: center;
+	font-size: rem(14);
+	line-height: calc(24/14);
+	font-weight: $regular;
+}
+
+.campaign-card__price {
+	margin-top: rem(8);
+	display: flex;
+	max-width: rem(211);
+	width: 100%;
+	justify-content: space-between;
+	font-family: "Lato", sans-serif;
+}
+
+.campaign-card__price-small {
+	font-size: rem(20);
+	line-height: calc(20/20);
+	font-weight: $bold;
+	color: $green2;
+	text-decoration: line-through;
+	text-decoration-color: $red;
+	text-decoration-thickness: rem(3);
+}
+
+.campaign-card__price-big {
+	font-size: rem(32);
+	line-height: calc(32/32);
+	font-weight: $bold;
+	color: $green;
+}
