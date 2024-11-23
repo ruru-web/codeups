@@ -1,0 +1,84 @@
+@use 'global' as *;
+
+.top-voice {
+	position: relative;
+}
+
+.top-voice::before {
+		@include mq("md") {
+		content: "";
+		position: absolute;
+		width: rem(301);
+		height: rem(138);
+		top: -19%;
+		left: calc(50% - min(43vw, rem(620)));
+		// left: calc(50% - 43vw);
+		// left: calc(50% - rem(620));
+		background-image: url(/assets/images/common/fish-green.svg);
+		// background-size: contain;
+		background-size: cover;
+		// 要素の領域に画像全体が収まるように拡大縮小される
+		transform: scaleX(-1);
+		//x軸に反転
+
+	}
+}
+
+.top-voice::after {
+	@include mq("md") {
+		content: "";
+		position: absolute;
+		width: rem(71);
+		height: rem(162);
+		bottom: -10.5%;
+		right: calc(50% - min(37.5vw, rem(540)));
+		// right: calc(50% - 37.5vw);
+		// right: calc(50% - rem(540));
+		background-image: url(/assets/images/common/seahorse.svg);
+		// background-size: contain;
+		background-size: cover;
+		// 要素の領域に画像全体が収まるように拡大縮小される
+	}
+}
+
+
+.top-voice__cards {
+	margin-top: rem(42);
+
+	@include mq("md") {
+		margin-top: rem(28);
+		// display: flex;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(40);
+	}
+}
+
+.top-voice__card + .top-voice__card {
+	margin-top: rem(41);
+
+	@include mq("md") {
+		margin-top: 0;
+	}
+}
+
+// .top-voice__card:nth-of-type(2n) {
+// 	@include mq("md") {
+// 		margin-left: rem(40);
+// 	}
+// }
+
+// .top-voice__card:nth-of-type(n+3) {
+// 	@include mq("md") {
+// 		margin-top: rem(40);
+// 	}
+// }
+
+.top-voice__button-wrap {
+	margin-top: rem(41);
+	text-align: center;
+
+	@include mq("md") {
+		margin-top: rem(79);
+	}
+}

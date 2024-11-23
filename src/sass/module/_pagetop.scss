@@ -1,0 +1,67 @@
+@use 'global' as *;
+
+.pagetop {
+	height: rem(48);
+	width: rem(48);
+	position: fixed;
+	right: rem(15);
+	bottom: rem(16);
+	border-radius: 50%;
+	border: rem(1) solid $green;
+	opacity: 0.7;
+	z-index: 2;
+	@include mq("md") {
+		height: rem(80);
+		width: rem(80);
+		right: rem(20);
+		bottom: rem(20);
+	}
+}
+
+.pagetop a {
+	display: inline-block;
+	height: rem(48);
+	width: rem(48);
+
+	@include mq("md") {
+		height: rem(80);
+		width: rem(80);
+	}
+}
+
+
+.pagetop-arrow1 {
+	position: absolute;
+	// top: rem(9);
+	top: 17%;
+	left: 50%;
+	// right: rem(40);
+	width: rem(1);
+	height: rem(28);
+	// height: rem(1);
+  background-color: $green;
+	// width: rem(40);
+
+	@include mq("md") {
+		top: rem(20);
+		left: 52%;
+		height: rem(40);
+	}
+	
+}
+
+.pagetop-arrow2  {
+	position: absolute;
+	// top: rem(12);
+	top: 26%;
+	right: rem(21.5);
+	width: rem(10);
+	height: rem(1);
+  transform: rotate(-45deg);
+  background-color: $green;
+
+	@include mq("md") {
+		top: rem(23);
+		left: rem(33);
+	}
+}

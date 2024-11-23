@@ -1,25 +1,26 @@
 @use 'global' as *;
 
-.button-wrap {
-
-}
 
 .button {
 	position: relative;
 	display: inline-block;
-	padding: rem(16) rem(40);
+	margin-right: rem(4);
+	margin-bottom: rem(5);
+	padding: rem(16) rem(50) rem(16) 0;
 	width: rem(202);
-	height: rem(54);
+	height: rem(55);
 	font-size: rem(14);
 	line-height: calc(22/14);
 	font-weight: $regular;
 	background-color: $green;
 	color: $white;
-  box-shadow: 0 0 0 0, rem(4) rem(4) 0 0 #fff, rem(4) rem(4) 0 rem(1) $green;
+	border: rem(1) solid $green;
+	text-align: center;
+	align-items: center;
+	z-index: 1;
 }
 
-.button::before {
-	content: "";
+.button-arrow1 {
 	position: absolute;
 	top: 50%;
 	right: rem(40);
@@ -28,13 +29,54 @@
 	width: rem(40);
 }
 
-.button::after {
-  content: "";
+.button-arrow2  {
 	position: absolute;
-	top: 43%;
+	top: 45%;
 	right: rem(40);
-	width: rem(10);
+	width: rem(8);
 	height: rem(1);
-  transform: rotate(45deg);
+  transform: rotate(40deg);
   background-color: $white;
+}
+
+.button::before {
+	content: "";
+	position: absolute;
+	width: rem(202);
+	height: rem(54);
+	top: rem(4);       /* ずらした位置 */
+  left: rem(4);
+  right: 0;
+  bottom: 0;
+  border: rem(1) solid $green;  /* 枠線の色を指定 */
+  pointer-events: none;      /* ボタンの操作を妨げないようにする */
+	z-index: -2;
+}
+
+.button::after {
+	content: "";
+	background-color: $white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);		//(X,Y軸)
+	transform-origin: left top;
+	transition: .2s cubic-bezier(0.45, 0, 0.55, 1);  //0.2秒かけてなめらかな動き
+	z-index: -1;
+}
+
+.button:hover {
+	color: $green;
+	opacity: 1;
+}
+
+.button:hover::after {
+	transform: scale(1, 1);  //X軸が広がる
+}
+
+.button:hover .button-arrow1,
+.button:hover .button-arrow2 {
+  background-color: $green;
 }

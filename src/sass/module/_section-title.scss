@@ -1,7 +1,6 @@
 @use 'global' as *;
 
 .section-title {
-	align-items: center;
 	text-align: center;
 }
 
@@ -16,13 +15,38 @@
 	}
 }
 
+.section-title-en-white {
+	@include mq("md") {
+		color: $white;
+	}
+}
+
+
 .section-title-en::first-letter {
 	color: $green;
 }
 
+.section-title-en-white::first-letter {
+	@include mq("md") {
+		color: $green3;
+	}
+}
+
+
+
 .section-title-ja {
+	margin-top: rem(6);
 	font-size: rem(12);
 	line-height: calc(18/12);
 	font-weight: $regular;
 	color: $green;
+	@include mq("md") {
+		margin-top: rem(10);
+	}
+}
+
+.section-title-ja-white {
+	@include mq("md") {
+		color: $white;
+	}
 }

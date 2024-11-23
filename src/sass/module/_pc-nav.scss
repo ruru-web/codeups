@@ -1,0 +1,77 @@
+@use 'global' as *;
+
+.pc-nav {
+	height: inherit;
+}
+
+.pc-nav__items {
+	height: inherit;
+	display: flex;
+}
+
+.pc-nav__item {
+	height: inherit;
+}
+
+.pc-nav__item a {
+	padding: 0 rem(20.1);
+	height: inherit;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: $white;
+	position: relative;
+}
+
+.pc-nav__item a::after {
+	content: "";
+	position: absolute;
+	background-color: $white;
+	bottom: rem(18);
+	height: rem(1);
+	left: 0;
+	transform: scale(0, 1);
+	// transform-origin: center top;
+	transform-origin: center center;
+	transition: transform .3s;
+	width: 100%;
+}
+
+.pc-nav__item a:hover::after {
+	transform: scale(1, 1);
+}
+
+
+
+// .pc-nav-wrap::after {
+// 	content: "";
+// 	position: absolute;
+// 	background-color: $white;
+// 	bottom: rem(18);
+// 	height: rem(1);
+// 	left: 0;
+// 	transform: scale(0, 1);
+// 	transform-origin: center top;
+// 	transition: transform .3s;
+// 	width: 100%;
+// }
+
+// .pc-nav-wrap:hover::after {
+// 	transform: scale(1, 1);
+// 	opacity: 0.7;
+// }
+
+
+.pc-nav__menu-en {
+	font-size: rem(18);
+	line-height: calc(18/18);
+	font-weight: $regular;
+}
+
+.pc-nav__menu-ja {
+	margin-top: rem(4);
+	font-size: rem(10);
+	line-height: calc(15/10);
+	font-weight: $regular;
+}
+

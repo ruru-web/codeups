@@ -1,0 +1,100 @@
+@use 'global' as *;
+
+.swiper-wrapper {
+	height: inherit;
+}
+
+.swiper-slide {
+	height: inherit;
+}
+
+.swiper-slide picture {
+	height: inherit;
+}
+
+.swiper-slide img {
+	height: inherit;
+	object-fit: cover;
+}
+
+
+.swiper-button__wrap {
+	position: absolute;
+	// top: rem(-2);
+	top: 0;
+	right: 2.1%;
+	width: rem(242);
+	height: rem(82);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+
+/* 前へ次への矢印を初期化 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  bottom: 0;
+  content: "";
+  height: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.swiper-button-prev, .swiper-button-next {
+	margin-top: 0;
+	top: 0;
+	width: rem(80);
+	height: rem(80);
+	border-radius: 50%;
+	border: rem(1) solid $green;
+	cursor: pointer;
+	// display: flex;
+	// justify-content: space-between;
+}
+
+.swiper-button-prev {
+	left: rem(1);
+}
+
+.swiper-button-next {
+	right: 0;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+	content: '';
+	position: relative;
+	top: rem(2);
+	width: rem(40);
+	height: rem(1);
+	// margin: auto;
+	background-color: $green;
+} 
+
+.swiper-button-prev::after {
+	content: '';
+	position: absolute;
+	width: rem(8);
+	top: rem(-2);
+	left: rem(19);
+	height: rem(1);
+	background-color: $green;
+	transform: rotate(-45deg);
+}
+
+.swiper-button-next::after {
+	content: '';
+	position: absolute;
+	width: rem(8);
+	right: rem(19);
+	top: rem(-2);
+	height: rem(1);
+	background-color: $green;
+	transform: rotate(45deg);
+}
+

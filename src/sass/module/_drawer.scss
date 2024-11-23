@@ -1,0 +1,39 @@
+@use 'global' as *;
+
+.drawer__nav {
+	display: flex;
+}
+
+.drawer__items {
+	width: 50%;
+}
+
+.drawer__item {
+	padding: rem(5.5) 0;
+}
+
+.drawer__item-link  {
+	display: block;
+	padding-top: rem(12);
+	padding-bottom: rem(12);
+	padding-left: rem(22);
+	font-size: rem(16);
+	line-height: calc(18/16);
+	font-weight: $regular;
+	align-items: center;
+}
+
+.drawer__item-list {
+	font-weight: $bold;
+}
+
+.drawer__item-list::before {
+	content: url(../images/common/icon-starfish.svg);
+	display: inline-block;
+	width: rem(18);
+	height: rem(18);
+	margin-right: rem(4);
+	margin-left: rem(-22);
+	margin-top: rem(2);
+	vertical-align: text-top;
+}

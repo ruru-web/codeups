@@ -1,0 +1,68 @@
+@use 'global' as *;
+
+.top-blog {
+	padding-top: rem(78);
+
+	@include mq("md") {
+		padding-top: rem(100);
+		background-color: $white;
+		background-image: url(/assets/images/common/blog-pc-bg.jpg);
+		background-repeat: no-repeat;
+		// background-size: auto 60.4%;
+		background-size: 100% 60.16847%;
+		// 正確には60.16847%
+		position: relative;
+	}
+}
+
+.top-blog::before {
+	@include mq("md") {
+		content: "";
+		position: absolute;
+		width: rem(437);
+		height: rem(201);
+		top: 3%;
+		left: calc(50% - min(43vw, rem(620)));
+		// left: calc(50% - 43vw);
+		// left: calc(50% - rem(620));
+		background-image: url(/assets/images/common/fish-rightgreen.svg);
+		// background-size: contain;
+		background-size: cover;
+		// 要素の領域に画像全体が収まるように拡大縮小される
+	}
+}
+
+
+.top-blog__inner {
+	padding-right: rem(21);
+	padding-left: rem(21);
+}
+
+.top-blog__title {
+	color: $white;
+}
+
+
+.top-blog__cards {
+	margin-top: rem(26);
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(rem(333), 1fr));
+	gap: rem(40);
+	place-content: center;
+	place-items: center;
+
+	@include mq("md") {
+		margin-top: rem(78);
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.top-blog__button-wrap {
+	margin-top: rem(39);
+	text-align: center;
+
+	@include mq("md") {
+		margin-top: rem(80);
+	}
+}

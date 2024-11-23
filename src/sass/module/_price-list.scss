@@ -1,0 +1,41 @@
+@use 'global' as *;
+
+.price-list {
+
+
+}
+
+.price-list__title {
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-weight: $bold;
+	color: $green2;
+	padding-bottom:rem(1);
+	border-bottom: rem(1) solid $green;
+	@include mq("md") {
+		padding-bottom: 0;
+	}
+}
+
+.price-list__menu {
+	margin-top: rem(7.8);
+	display: flex;
+	justify-content: space-between;
+	font-size: rem(14);
+	line-height: calc(24/14);
+	font-weight: $regular;
+	color: $green2;
+	font-family: "Noto Sans JP", sans-serif;
+	@include mq("md") {
+		font-size: rem(16);
+		line-height: calc(24/16);
+	}
+}
+
+.price-list__course {
+
+}
+
+.price-list__number {
+	// font-family: "Noto Sans JP", sans-serif;
+}
