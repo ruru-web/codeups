@@ -90,76 +90,41 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // ボタンがフッターと重ならないようにする
-  $(window).on("scroll resize", function () {
+  $(window).on("scroll", function () {
+    const footerHeight = footer.innerHeight(); //フッターの高さ {}内に記入しないと反映されない
     const windowHeight = $(window).height(); //ユーザーが見える画面（ウィンドウ）の高さ
     const scrollTop = $(window).scrollTop(); //ページの上からの距離
     const documentHeight = $(document).height(); //ページ全体の高さを取得します（フッターを含む）
     const distanceFromBottom = documentHeight - (scrollTop + windowHeight); //ページの下部までの残りの距離を計算
-    const offsetFromFooter = 16; // フッター上に確保する余白（16px）
     //ページ全体の高さから、現在のウィンドウ下端の位置を引くことで「下端からページ最下部までの距離」を計算
-    // const isWideScreen = $(window).width() >= 769; // 画面幅の条件
-    // const baseBottom = Math.max(16, windowHeight * 0.05); // ボタンの基準位置（画面の高さの5% or 最低16px）
-    // const adjustedBottom = footerHeight + baseBottom; // フッターと重なったときの位置
-
-
-    if (distanceFromBottom <= footerHeight + offsetFromFooter) {
-      // フッターに近づいた場合はフッターの上に配置
-      pageTop.css({
-        position: "absolute",
-        bottom: footerHeight + offsetFromFooter,
-      });
-    } else {
-      // 通常の固定表示
-      pageTop.css({
-        position: "fixed",
-        bottom: offsetFromFooter,
-      });
-    }
-
 
     // レスポンシブ対応
-    // if ($(window).width() >= 769) { // 769px以上の場合
-    //   //画面下部がフッターに近づいている状態であれば
-    //   if (distanceFromBottom <= footerHeight) {
-    //     pageTop.css({
-    //       position: "absolute",
-    //       bottom: footerHeight + 20,
-    //     });
-    //   } else {
-    //     pageTop.css({
-    //       position: "fixed",
-    //       bottom: 20,
-    //     });
-    //   }
-    // } else { // 768px以下の場合
-    //   if (distanceFromBottom <= footerHeight) {
-    //     pageTop.css({
-    //       position: "absolute",
-    //       bottom: footerHeight + 16,
-    //     });
-    //   } else {
-    //     pageTop.css({
-    //       position: "fixed",
-    //       bottom: 16,
-    //     });
-    //   }
-    // }
-
-    // const baseBottom = isWideScreen ? 20 : 16; // ベースのボタン位置
-    // const buttonBottom = isWideScreen ? footerHeight + 20 : footerHeight + 16; // フッター内での位置
-  
-    // if (distanceFromBottom <= footerHeight) {
-    //   pageTop.css({
-    //     position: "absolute",
-    //     bottom: buttonBottom,
-    //   });
-    // } else {
-    //   pageTop.css({
-    //     position: "fixed",
-    //     bottom: baseBottom,
-    //   });
-    // }
-    
+    if ($(window).width() >= 769) { // 769px以上の場合
+      //画面下部がフッターに近づいている状態であれば
+      if (distanceFromBottom <= footerHeight) {
+        pageTop.css({
+          position: "absolute",
+          bottom: footerHeight + 20,
+        });
+      } else {
+        pageTop.css({
+          position: "fixed",
+          bottom: '20px',
+        });
+      }
+    } else { // 768px以下の場合
+      if (distanceFromBottom <= footerHeight) {
+        pageTop.css({
+          position: "absolute",
+          bottom: footerHeight + 16,
+        });
+      } else {
+        pageTop.css({
+          position: "fixed",
+          bottom: '16px',
+        });
+      }
+    }
 
   });
 
