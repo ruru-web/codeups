@@ -1,73 +1,72 @@
-@use 'global' as *;
+@use "global" as *;
 
 .top-price {
-	padding-top: rem(80);
-	padding-bottom: rem(79);
-	background-color: $green3;
+  padding-top: rem(80);
+  padding-bottom: rem(79);
+  background-color: $green3;
 
-	@include mq("md") {
-		padding-top: rem(100);
-		padding-bottom: rem(98);
-	}
+  @include mq("md") {
+    padding-top: rem(100);
+    padding-bottom: rem(98);
+  }
 }
 
 .top-price__inner {
-	@include mq("md") {
-		max-width: rem(1127);
-	}
+  @include mq("md") {
+    max-width: rem(1127);
+  }
 }
 
 .top-price__container {
-	position: relative;
-	margin-top: rem(27);
+  position: relative;
+  margin-top: rem(27);
 
-	@include mq("md") {
-		margin-top: rem(38);
-		display: flex;
-		gap: 8.635%;
-	}
+  @include mq("md") {
+    margin-top: rem(38);
+    display: flex;
+    gap: 8.635%;
+  }
 }
 
 .top-price__container::before {
-	@include mq("md") {
-		content: "";
-		position: absolute;
-		width: rem(437);
-		height: rem(201);
-		bottom: -24%;
-		left: calc(50% - min(43vw, rem(620)));
-		background-image: url(/assets/images/common/fish-green.svg);
-		background-size: cover;
-		// 要素の領域に画像全体が収まるように拡大縮小される
-
-	}
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    width: rem(437);
+    height: rem(201);
+    bottom: -24%;
+    left: calc(50% - min(43vw, rem(620)));
+    background-image: url(./s/images/common/fish-green.svg);
+    background-size: cover;
+    // 要素の領域に画像全体が収まるように拡大縮小される
+  }
 }
 
 .top-price__image {
-	@include mq("md") {
-		order: 1;
-		width: 50%;
-	}
+  @include mq("md") {
+    order: 1;
+    width: 50%;
+  }
 }
 
 .top-price__lists {
-	margin-top: rem(42);
+  margin-top: rem(42);
 
-	@include mq("md") {
-		width: 50%;
-		margin-top: rem(4);
-	}
+  @include mq("md") {
+    width: 50%;
+    margin-top: rem(4);
+  }
 }
 
 .top-price__list + .top-price__list {
-	margin-top: rem(43);
+  margin-top: rem(43);
 }
 
 .top-price__button-wrap {
-	margin-top: rem(39);
-	text-align: center;
+  margin-top: rem(39);
+  text-align: center;
 
-	@include mq("md") {
-		margin-top: rem(78);
-	}
+  @include mq("md") {
+    margin-top: rem(78);
+  }
 }
