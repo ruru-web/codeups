@@ -24,7 +24,7 @@
 		right: calc(50% - min(44.2vw, rem(637)));
 		// right: calc(50% - 44.2vw);
 		// right: calc(50% - rem(637));
-		background-image: url(/assets/images/common/coral.svg);
+		background-image: url(../images/common/coral.svg);
 		// background-size: contain;
 		background-size: cover;
 		// 要素の領域に画像全体が収まるように拡大縮小される
@@ -104,6 +104,7 @@
 	font-size: rem(16);
 	line-height: calc(24/16);
 	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
 	color: $green2;
 
 	@include mq("md") {

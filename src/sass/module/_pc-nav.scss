@@ -23,6 +23,10 @@
 	position: relative;
 }
 
+.pc-nav__item a:hover {
+	opacity: 1;
+}
+
 .pc-nav__item a::after {
 	content: "";
 	position: absolute;
@@ -39,28 +43,8 @@
 
 .pc-nav__item a:hover::after {
 	transform: scale(1, 1);
+	opacity: 1;
 }
-
-
-
-// .pc-nav-wrap::after {
-// 	content: "";
-// 	position: absolute;
-// 	background-color: $white;
-// 	bottom: rem(18);
-// 	height: rem(1);
-// 	left: 0;
-// 	transform: scale(0, 1);
-// 	transform-origin: center top;
-// 	transition: transform .3s;
-// 	width: 100%;
-// }
-
-// .pc-nav-wrap:hover::after {
-// 	transform: scale(1, 1);
-// 	opacity: 0.7;
-// }
-
 
 .pc-nav__menu-en {
 	font-size: rem(18);
@@ -73,5 +57,7 @@
 	font-size: rem(10);
 	line-height: calc(15/10);
 	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+
 }
 

@@ -1,9 +1,10 @@
 @use 'global' as *;
 
 .campaign-card {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	max-width: rem(280);
-	height: 100%;
 	background-color: $white;
 	box-shadow: 0 rem(4) rem(4) 0 rgba(0, 0, 0, 0.25);
 	@include mq("md") {
@@ -29,6 +30,9 @@
 }
 
 .campaign-card__body{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
 	padding-top: rem(16);
 	padding-bottom: rem(24);
 	max-width: rem(248);
@@ -41,7 +45,23 @@
 	}
 }
 
-.campaign-card__tag {
+// .campaign-card__tag {
+	// display: inline-block;
+	// text-align: center;
+	// border: rem(1) solid $green;
+	// padding: rem(5) rem(11) rem(1);
+	// font-size: rem(12);
+	// line-height: calc(22/12);
+	// font-weight: $regular;
+	// font-family: "Noto Sans JP", sans-serif;
+	// color: $green;
+
+	// @include mq("md") {
+	// 	padding: rem(7) rem(15) rem(3);
+	// }
+// }
+
+.campaign-card__tag-text {
 	display: inline-block;
 	text-align: center;
 	border: rem(1) solid $green;
@@ -49,16 +69,21 @@
 	font-size: rem(12);
 	line-height: calc(22/12);
 	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green;
+
 	@include mq("md") {
 		padding: rem(7) rem(15) rem(3);
 	}
 }
 
 .campaign-card__title {
+	flex-grow: 1;
 	margin-top: rem(7);
 	font-size: rem(16);
 	line-height: calc(24/16);
 	font-weight: $medium;
+	font-family: "Noto Sans JP", sans-serif;
 }
 
 .campaign-card__text {
@@ -69,6 +94,7 @@
 	font-size: rem(14);
 	line-height: calc(24/14);
 	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
 	@include mq("md") {
 		padding-top: rem(16);
 		font-size: rem(16);

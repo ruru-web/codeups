@@ -63,5 +63,6 @@
 	height: 100vh;
 	background-color: $green;
 	color: $white;
-	// overflow-y: scroll;
+	overflow-y: scroll;
+	//必須 画面幅が見切れた場合スクロールが必要
 }

@@ -36,18 +36,28 @@
     height: rem(201);
     bottom: -24%;
     left: calc(50% - min(43vw, rem(620)));
-    background-image: url(./s/images/common/fish-green.svg);
+    background-image: url(../images/common/fish-green.svg);
     background-size: cover;
     // 要素の領域に画像全体が収まるように拡大縮小される
   }
 }
 
 .top-price__image {
+  aspect-ratio: 345/227;
+
   @include mq("md") {
+    aspect-ratio: 492/746;
     order: 1;
     width: 50%;
   }
 }
+
+.top-price__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .top-price__lists {
   margin-top: rem(42);

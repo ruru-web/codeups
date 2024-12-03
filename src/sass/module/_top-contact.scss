@@ -27,7 +27,7 @@
 	right: calc(50% - min(46vw, rem(172)));
 	// right: calc(50% - 46vw);
 	// right: calc(50% - rem(172));
-	background-image: url(/assets/images/common/fish-green.svg);
+	background-image: url(../images/common/fish-green.svg);
 	// background-size: contain;
 	background-size: cover;
 	// 要素の領域に画像全体が収まるように拡大縮小される
@@ -79,7 +79,7 @@
 	font-size: rem(16);
 	line-height: calc(24/16);
 	// font-weight: $regular;
-	font-weight: $normal;
+	font-weight: $regular;
 	font-family: "Noto Sans JP", sans-serif;
 	color: $green2;
 
@@ -143,6 +143,7 @@
 	font-size: rem(80);
 	line-height: calc(80/80);
 	font-weight: $regular;
+	
 	color: $green2;
 	@include mq("md") {
 		// font-size: rem(40);
@@ -158,6 +159,7 @@
 	font-size: rem(12);
 	line-height: 1;
 	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
 	color: $green;
 	// @include mq("md") {
 	// 	margin-top: rem(10);
@@ -170,6 +172,7 @@
 	font-size: rem(14);
 	line-height: calc(18/14);
 	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
 	color: $green;
 
 	@include mq("md") {

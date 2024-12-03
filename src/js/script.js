@@ -128,40 +128,79 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   });
 
+
+
+
+
+
+
   //画像のアニメーション
   //要素の取得とスピードの設定
   var box = $('.js-colorbox'), //クラスを取得
   speed = 700; // アニメーションの速度0.7s
 
   //.colorboxの付いた全ての要素に対して下記の処理を行う
-  box.each(function(){
-  $(this).append('<div class="color js-color"></div>')
-  // colorboxに<div class="color"></div>を追加
-  var color = $(this).find('.js-color'),
-  // 追加したcolor要素を取得
-  image = $(this).find('img');
-  // colorboxの中にある<img>タグを取得
-  var counter = 0;
-  // アニメーション実行回数を記録（最初は0）
+  // box.each(function(){
+  // $(this).append('<div class="color js-color"></div>')
+  // // colorboxに<div class="color"></div>を追加
+  // var color = $(this).find('.js-color'),
+  // // 追加したcolor要素を取得
+  // image = $(this).find('img');
+  // // colorboxの中にある<img>タグを取得
+  // var counter = 0;
+  // // アニメーション実行回数を記録（最初は0）
 
-   // 初期状態をセット
-  image.css('opacity','0'); // 画像を透明に設定
-  color.css('width','0%');  // 背景色の幅を0%に設定
+  //  // 初期状態をセット
+  // image.css('opacity','0'); // 画像を透明に設定
+  // color.css('width','0%');  // 背景色の幅を0%に設定
 
-    //スクロールで要素が見えたら実行（inview.jsを使用）
-    color.on('inview', function(){
-      if(counter == 0){
-      $(this).delay(200).animate({'width':'100%'},speed,function(){
-        //  少し遅らせてから実行,背景色を横に広げる
-            image.css('opacity','1');   // 画像を表示（透明を解除）
+  //   //スクロールで要素が見えたら実行（inview.jsを使用）
+  //   color.on('inview', function(){
+  //     if(counter == 0){
+  //     $(this).delay(200).animate({'width':'100%'},speed,function(){
+  //       //  少し遅らせてから実行,背景色を横に広げる
+  //           image.css('opacity','1');   // 画像を表示（透明を解除）
             
-            $(this).css({'left':'0' , 'right':'auto'});   // 背景位置を変更
-            $(this).animate({'width':'0%'},speed);    // 背景色を消す
-        })
-          counter = 1;  // アニメーション実行済みとして記録
-        }
+  //           $(this).css({'left':'0' , 'right':'auto'});   // 背景位置を変更
+  //           $(this).animate({'width':'0%'},speed);    // 背景色を消す
+  //       })
+  //         counter = 1;  // アニメーション実行済みとして記録
+  //       }
+  //   });
+  // });
+
+
+  if (box.length === 0) {
+    console.warn('No elements with .js-colorbox class found.');
+    return; // 処理を中断
+  }
+
+  // .js-colorbox の付いた全ての要素に対して処理を実行
+  box.each(function() {
+    var $this = $(this);
+
+    // 必要な要素を追加し取得
+    $this.append('<div class="color js-color"></div>');
+    var color = $this.find('.js-color'),
+        image = $this.find('img');
+
+    // 初期状態をセット
+    image.css({'opacity': '0'});
+    color.css({'width': '0%'});
+
+    // スクロールで要素が見えたら実行（inview.jsを使用）
+    color.on('inview', function() {
+      if (!$(this).data('animated')) {
+        $(this).data('animated', true); // アニメーション済み
+        $(this).delay(200).animate({'width': '100%'}, speed, function() {
+          image.css('opacity', '1');
+          $(this).css({'left': '0', 'right': 'auto'})
+                 .animate({'width': '0%'}, speed);
+        });
+      }
     });
   });
+
 
 
 

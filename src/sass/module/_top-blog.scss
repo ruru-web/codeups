@@ -6,7 +6,7 @@
 	@include mq("md") {
 		padding-top: rem(100);
 		background-color: $white;
-		background-image: url(/assets/images/common/blog-pc-bg.jpg);
+		background-image: url(../images/common/blog-pc-bg.jpg);
 		background-repeat: no-repeat;
 		// background-size: auto 60.4%;
 		background-size: 100% 60.16847%;
@@ -25,7 +25,7 @@
 		left: calc(50% - min(43vw, rem(620)));
 		// left: calc(50% - 43vw);
 		// left: calc(50% - rem(620));
-		background-image: url(/assets/images/common/fish-rightgreen.svg);
+		background-image: url(../images/common/fish-rightgreen.svg);
 		// background-size: contain;
 		background-size: cover;
 		// 要素の領域に画像全体が収まるように拡大縮小される
@@ -47,7 +47,7 @@
 	margin-top: rem(26);
 	margin-inline: auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(rem(333), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr));
 	gap: rem(40);
 	place-content: center;
 	place-items: center;
@@ -55,6 +55,7 @@
 	@include mq("md") {
 		margin-top: rem(78);
 		grid-template-columns: repeat(3, 1fr);
+		
 	}
 }
 

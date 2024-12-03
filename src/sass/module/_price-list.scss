@@ -9,6 +9,7 @@
 	font-size: rem(16);
 	line-height: calc(24/16);
 	font-weight: $bold;
+	font-family: "Noto Sans JP", sans-serif;
 	color: $green2;
 	padding-bottom:rem(1);
 	border-bottom: rem(1) solid $green;
@@ -37,5 +38,5 @@
 }
 
 .price-list__number {
-	// font-family: "Noto Sans JP", sans-serif;
+	margin-left: rem(8);
 }
