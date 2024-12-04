@@ -7,7 +7,7 @@
 	padding-top: rem(16);
 	padding-left: rem(16);
 	padding-right: rem(16);
-	padding-bottom: rem(22);
+	padding-bottom: rem(23);
 	background: $white;
 	box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
 
@@ -67,7 +67,7 @@
 
 .blog-card__text {
 	margin-top: rem(3);
-	padding-top: rem(16);
+	padding-top: rem(15);
 	border-top: rem(1) solid $green;
 	font-size: rem(16);
 	line-height: calc(24/16);

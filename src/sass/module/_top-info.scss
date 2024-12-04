@@ -42,7 +42,7 @@
 }
 
 .top-info__content {
-	margin-top: rem(29);
+	margin-top: rem(24);
 
 	@include mq("md") {
 		width: 50%;
@@ -52,7 +52,7 @@
 	}
 }
 
-.top-info__title {
+.top-info__content-title {
 	font-size: rem(20);
 	line-height: calc(24/20);
 	font-weight: $bold;
@@ -64,8 +64,9 @@
 	}
 }
 
-.top-info__text {
-	padding-top: rem(6);
+.top-info__content-text {
+	margin-top: rem(3);
+	padding-top: rem(7);
 	border-top: rem(1) solid $green;
 	font-size: rem(16);
 	line-height: calc(24/16);

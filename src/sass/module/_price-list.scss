@@ -11,10 +11,10 @@
 	font-weight: $bold;
 	font-family: "Noto Sans JP", sans-serif;
 	color: $green2;
-	padding-bottom:rem(1);
+	padding-bottom:rem(4);
 	border-bottom: rem(1) solid $green;
 	@include mq("md") {
-		padding-bottom: 0;
+		padding-bottom: 3px;
 	}
 }
 
@@ -30,6 +30,7 @@
 	@include mq("md") {
 		font-size: rem(16);
 		line-height: calc(24/16);
+		// font-weight: $bold;
 	}
 }
 

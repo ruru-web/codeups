@@ -90,10 +90,10 @@
 }
 
 .top-about__wrap {
-	margin-top: rem(19);
+	margin-top: rem(17);
 
 	@include mq("md") {
-		margin-top: rem(4);
+		margin-top: 0;
 		margin-left: rem(40);
 		max-width: rem(400);
 		width: 100%;
@@ -113,10 +113,10 @@
 }
 
 .top-about__button-wrap {
-	margin-top: rem(46);
+	margin-top: rem(49);
 	text-align: center;
 
 	@include mq("md") {
-		margin-top: rem(35);
+		margin-top: rem(40);
 	}
 }

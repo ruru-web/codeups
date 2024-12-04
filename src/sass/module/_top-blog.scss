@@ -53,7 +53,7 @@
 	place-items: center;
 
 	@include mq("md") {
-		margin-top: rem(78);
+		margin-top: rem(79);
 		grid-template-columns: repeat(3, 1fr);
 		
 	}

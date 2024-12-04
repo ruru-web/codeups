@@ -54,11 +54,11 @@
 }
 
 .footer__nav {
-	margin-top: rem(21);
+	margin-top: rem(19);
 	display: flex;
 
 	@include mq("md") {
-		margin-top: rem(5);
+		margin-top: rem(4);
 		justify-content: space-between;
 		max-width: rem(1008);
 	}
@@ -77,7 +77,7 @@
 }
 
 .footer__item {
-	padding: rem(5.5) 0;
+	padding: rem(6.5) 0;
 }
 
 .footer__item-link  {
@@ -109,7 +109,7 @@
 }
 
 .footer__copyright {
-	margin-top: rem(19);
+	margin-top: rem(21);
 	display: block;
 	font-size: rem(12);
 	line-height: calc(18/12);
@@ -117,7 +117,7 @@
 	text-align: center;
 
 	@include mq("md") {
-		margin-top: rem(60);
+		margin-top: rem(61);
 		font-size: rem(14);
 		line-height: calc(18/14);
 	}
