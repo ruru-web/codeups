@@ -1519,7 +1519,7 @@ html {
 }
 
 .price-list__title {
-	padding-bottom: 3px;
+	padding-bottom: 0.1875rem;
 }
 
 .price-list__menu {

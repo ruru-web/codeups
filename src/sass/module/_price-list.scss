@@ -14,7 +14,7 @@
 	padding-bottom:rem(4);
 	border-bottom: rem(1) solid $green;
 	@include mq("md") {
-		padding-bottom: 3px;
+		padding-bottom: rem(3);
 	}
 }
 
