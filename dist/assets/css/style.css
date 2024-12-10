@@ -614,7 +614,6 @@ a {
 .header__logo {
 	height: inherit;
 	position: relative;
-	z-index: 5001;
 }
 
 .header__logo a {
@@ -637,12 +636,12 @@ a {
 	display: none;
 	height: 100vh;
 	left: 0;
-	overflow-y: scroll;
-	padding-top: 5.25rem;
+	margin-top: 5rem;
+	overflow-y: auto;
+	padding-bottom: 6.25rem;
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 5000;
 }
 
 .inner {
@@ -1028,7 +1027,7 @@ a {
 	content: "";
 	height: 3.125rem;
 	position: absolute;
-	right: calc(50% - min(46vw, 10.75rem));
+	right: calc(50% - min(46vw, 17.5rem));
 	top: -4.3%;
 	width: 6.8125rem;
 }
@@ -1560,7 +1559,7 @@ html {
 	content: "";
 	height: 11.3125rem;
 	position: absolute;
-	right: calc(50% - min(44.2vw, 39.8125rem));
+	right: calc(50% - min(48vw, 39.8125rem));
 	width: 12.125rem;
 }
 
@@ -1619,7 +1618,7 @@ html {
 	background-size: cover;
 	content: "";
 	height: 12.5625rem;
-	left: calc(50% - min(43vw, 38.75rem));
+	left: calc(50% - min(48vw, 38.75rem));
 	position: absolute;
 	top: 3%;
 	width: 27.3125rem;
@@ -1655,7 +1654,7 @@ html {
 
 .top-contact__container::after {
 	height: 8.625rem;
-	right: calc(50% - min(46.5vw, 41.9375rem));
+	right: calc(50% - min(48vw, 41.9375rem));
 	top: -9%;
 	width: 18.8125rem;
 }
@@ -1784,7 +1783,7 @@ html {
 	bottom: -24%;
 	content: "";
 	height: 12.5625rem;
-	left: calc(50% - min(43vw, 38.75rem));
+	left: calc(50% - min(48vw, 38.75rem));
 	position: absolute;
 	width: 27.3125rem;
 }
@@ -1809,7 +1808,7 @@ html {
 	background-size: cover;
 	content: "";
 	height: 8.625rem;
-	left: calc(50% - min(43vw, 38.75rem));
+	left: calc(50% - min(48vw, 38.75rem));
 	position: absolute;
 	top: -19%;
 	transform: scaleX(-1);
@@ -1823,7 +1822,7 @@ html {
 	content: "";
 	height: 10.125rem;
 	position: absolute;
-	right: calc(50% - min(37.5vw, 33.75rem));
+	right: calc(50% - min(48vw, 33.75rem));
 	width: 4.4375rem;
 }
 

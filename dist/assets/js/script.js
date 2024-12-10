@@ -8,7 +8,13 @@ jQuery(function ($) {
       $(this).toggleClass("is-open");
       if ($(this).hasClass("is-open")) {
         openDrawer();
+        // ページのスクロールを止める
+        $("body").css("overflow-y", "hidden");
+        $("header").css("background-color", "#408F95");
       } else {
+        // ページのスクロールを元に戻す
+        $("body").css("overflow-y", "");
+        $("header").css("background-color", "");
         closeDrawer();
       }
     });

@@ -35,7 +35,8 @@
     width: rem(437);
     height: rem(201);
     bottom: -24%;
-    left: calc(50% - min(43vw, rem(620)));
+    left: calc(50% - min(48vw, rem(620)));
+    	// left: calc(50% - 43vw);
     background-image: url(../images/common/fish-green.svg);
     background-size: cover;
     // 要素の領域に画像全体が収まるように拡大縮小される
