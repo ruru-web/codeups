@@ -46,16 +46,9 @@
 .top-blog__cards {
 	margin-top: rem(26);
 	margin-inline: auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr));
-	gap: rem(40);
-	place-content: center;
-	place-items: center;
 
 	@include mq("md") {
 		margin-top: rem(79);
-		grid-template-columns: repeat(3, 1fr);
-		
 	}
 }
 

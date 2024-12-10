@@ -187,7 +187,6 @@ a {
 	padding-left: 1rem;
 	padding-right: 1rem;
 	padding-top: 1rem;
-	width: 100%;
 }
 
 .blog-card__image {
@@ -229,6 +228,23 @@ a {
 	line-height: 1.5;
 	margin-top: 0.1875rem;
 	padding-top: 0.9375rem;
+}
+
+.blog-cards {
+	grid-gap: 2.5rem;
+	align-content: center;
+	align-items: center;
+	display: grid;
+	gap: 2.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(20.8125rem, 1fr));
+	justify-content: center;
+	justify-items: center;
+	place-content: center;
+	place-items: center;
+}
+
+.blog-cards__item {
+	width: 100%;
 }
 
 .button {
@@ -316,8 +332,6 @@ a {
 	box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
 	display: flex;
 	flex-direction: column;
-	max-width: 17.5rem;
-	width: 100%;
 }
 
 .campaign-card__image {
@@ -404,6 +418,12 @@ a {
 	font-weight: 700;
 	line-height: 1;
 	margin-left: 1.1875rem;
+}
+
+.campaign-cards__item {
+	height: auto;
+	max-width: 17.5rem;
+	width: 100%;
 }
 
 .colorbox {
@@ -958,19 +978,9 @@ a {
 }
 
 .top-blog__cards {
-	grid-gap: 2.5rem;
-	align-content: center;
-	align-items: center;
-	display: grid;
-	gap: 2.5rem;
-	grid-template-columns: repeat(auto-fit, minmax(20.8125rem, 1fr));
-	justify-content: center;
-	justify-items: center;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1.625rem;
-	place-content: center;
-	place-items: center;
 }
 
 .top-blog__button-wrap {
@@ -1000,10 +1010,6 @@ a {
 	height: 100%;
 	padding-bottom: 0.625rem;
 	scrollbar-width: none;
-}
-
-.top-campaign__card {
-	height: auto;
 }
 
 .top-campaign__button-wrap {
@@ -1249,10 +1255,6 @@ a {
 	margin-top: 2.625rem;
 }
 
-.top-voice__card + .top-voice__card {
-	margin-top: 2.5625rem;
-}
-
 .top-voice__button-wrap {
 	margin-top: 2.5625rem;
 	text-align: center;
@@ -1261,13 +1263,10 @@ a {
 .voice-card {
 	box-shadow: 0.125rem 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.25);
 	height: 100%;
-	margin: 0 auto;
-	max-width: 21.5625rem;
 	padding-bottom: 1.375rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	padding-top: 0.9375rem;
-	width: 100%;
 }
 
 .voice-card__wrap {
@@ -1342,6 +1341,16 @@ a {
 	max-width: 19.5625rem;
 }
 
+.voice-cards__item {
+	margin: 0 auto;
+	max-width: 21.5625rem;
+	width: 100%;
+}
+
+.voice-cards__item + .voice-cards__item {
+	margin-top: 2.5625rem;
+}
+
 @media screen and (min-width: 768px) {
 
 .u-desktop {
@@ -1389,8 +1398,8 @@ html {
 	height: 100%;
 }
 
-.campaign-card {
-	max-width: 20.8125rem;
+.blog-cards {
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .campaign-card__image {
@@ -1432,6 +1441,10 @@ html {
 	font-size: 2.5rem;
 	line-height: 1;
 	margin-left: 1.625rem;
+}
+
+.campaign-cards__item {
+	max-width: 20.8125rem;
 }
 
 .footer {
@@ -1625,7 +1638,6 @@ html {
 }
 
 .top-blog__cards {
-	grid-template-columns: repeat(3, 1fr);
 	margin-top: 4.9375rem;
 }
 
@@ -1827,15 +1839,7 @@ html {
 }
 
 .top-voice__cards {
-	grid-gap: 2.5rem;
-	display: grid;
-	gap: 2.5rem;
-	grid-template-columns: repeat(2, 1fr);
 	margin-top: 1.8125rem;
-}
-
-.top-voice__card + .top-voice__card {
-	margin-top: 0;
 }
 
 .top-voice__button-wrap {
@@ -1843,7 +1847,6 @@ html {
 }
 
 .voice-card {
-	max-width: 32.5rem;
 	padding-bottom: 1.4375rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
@@ -1890,6 +1893,21 @@ html {
 .voice-card__text {
 	margin-top: 2.5625rem;
 	max-width: 29.5rem;
+}
+
+.voice-cards {
+	grid-gap: 2.5rem;
+	display: grid;
+	gap: 2.5rem;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.voice-cards__item {
+	max-width: 32.5rem;
+}
+
+.voice-cards__item + .voice-cards__item {
+	margin-top: 0;
 }
 
 }

@@ -1,8 +1,6 @@
 @use 'global' as *;
 
 .blog-card {
-	// max-width: rem(333);
-	width: 100%;
 	height: 100%;
 	padding-top: rem(16);
 	padding-left: rem(16);
@@ -10,10 +8,6 @@
 	padding-bottom: rem(23);
 	background: $white;
 	box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
-
-	@include mq("md") {
-		// max-width: initial;
-	}
 }
 
 .blog-card a {

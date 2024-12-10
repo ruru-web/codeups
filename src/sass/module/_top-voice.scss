@@ -47,32 +47,8 @@
 
 	@include mq("md") {
 		margin-top: rem(29);
-		// display: flex;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: rem(40);
 	}
 }
-
-.top-voice__card + .top-voice__card {
-	margin-top: rem(41);
-
-	@include mq("md") {
-		margin-top: 0;
-	}
-}
-
-// .top-voice__card:nth-of-type(2n) {
-// 	@include mq("md") {
-// 		margin-left: rem(40);
-// 	}
-// }
-
-// .top-voice__card:nth-of-type(n+3) {
-// 	@include mq("md") {
-// 		margin-top: rem(40);
-// 	}
-// }
 
 .top-voice__button-wrap {
 	margin-top: rem(41);
