@@ -22,7 +22,7 @@
   margin-top: rem(27);
 
   @include mq("md") {
-    margin-top: rem(39);
+    margin-top: rem(40);
     display: flex;
     gap: 8.635%;
   }
@@ -61,7 +61,7 @@
 
 
 .top-price__lists {
-  margin-top: rem(39);
+  margin-top: rem(40);
 
   @include mq("md") {
     width: 50%;
@@ -75,10 +75,10 @@
 }
 
 .top-price__button-wrap {
-  margin-top: rem(38);
+  margin-top: rem(40);
   text-align: center;
 
   @include mq("md") {
-    margin-top: rem(78);
+    margin-top: rem(80);
   }
 }

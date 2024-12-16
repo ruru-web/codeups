@@ -15,7 +15,7 @@
 
 .blog-cards__item {
 	// max-width: rem(333);
-	width: 100%;
+	// width: 100%; //gridあるから不要、div要素で元から100%
 	
 	@include mq("md") {
 		// max-width: initial;

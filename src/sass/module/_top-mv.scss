@@ -11,11 +11,12 @@
 
 .top-mv__inner {
 	// width: 100%;
-	height: inherit;
+	height: inherit; 
+	//子要素に影響されるため何も指定しなくても問題なし
 }
 
 .top-mv__slider {
-	height: inherit;
+	height: inherit;	//top-mvから引き継ぐ
 	min-height: rem(400);
 	position: relative;
 	@include mq("md") {
@@ -60,7 +61,7 @@
 .top-mv__text {
 	font-size: rem(20);
 	line-height: calc(33/20);
-	font-family: "Gotu", sans-serif;
+	// font-family: "Gotu", sans-serif;
 	font-weight: $regular;
 	// margin-right: rem(24);
 	@include mq("md") {

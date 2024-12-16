@@ -3,28 +3,26 @@
 .swiper-wrapper {
 	// height: inherit;
 	height: 100vh;
+	//Swiperの動作で高さを明示することが推奨されるため、height: 100vh;が適切
 }
 
-.swiper-slide {
-	// height: auto;
-	height: inherit;
-}
+// .swiper-slide {
+	// height: inherit;
+	//通常は必要。カードタイプのswiperがあるため今回不要
+// }
 
-.swiper-slide picture {
-	height: inherit;
-	// height: 100vh;
-}
+// .swiper-slide picture {
+	// height: inherit;
+// }
 
 .swiper-slide img {
-	height: inherit;
-	// height: 100vh;
+	// height: inherit;
+	height: 100%;
 	object-fit: cover;
 }
 
-
 .swiper-button__wrap {
 	position: absolute;
-	// top: rem(-2);
 	top: 0;
 	right: 2.1%;
 	width: rem(242);

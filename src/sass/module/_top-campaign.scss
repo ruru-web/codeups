@@ -16,6 +16,7 @@
 	// margin-right: calc(50% - 50vw + rem(15));
 	margin-right: calc(50% - 50vw);
 	// width: 100vw;
+	height: 100%;
 	
 	@include mq("md") {
 		margin-top: rem(38);
@@ -45,6 +46,6 @@
 	text-align: center;
 
 	@include mq("md") {
-		margin-top: rem(68);
+		margin-top: rem(70);
 	}
 }

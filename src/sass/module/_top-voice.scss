@@ -51,10 +51,10 @@
 }
 
 .top-voice__button-wrap {
-	margin-top: rem(41);
+	margin-top: rem(40);
 	text-align: center;
 
 	@include mq("md") {
-		margin-top: rem(79);
+		margin-top: rem(80);
 	}
 }

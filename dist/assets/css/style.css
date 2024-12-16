@@ -1,23 +1,3 @@
-body {
-	font-family: "Gotu", sans-serif;
-	position: relative;
-	scroll-behavior: smooth;
-}
-
-a:hover {
-	opacity: 0.7;
-}
-
-.u-desktop {
-	display: none;
-}
-
-/* リキッドレイアウト対応 */
-
-html {
-	font-size: 16px;
-}
-
 *,
 *::before,
 *::after {
@@ -151,16 +131,36 @@ a {
 	transition: opacity 0.3s;
 }
 
+body {
+	font-family: "Gotu", sans-serif;
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+a:hover {
+	opacity: 0.7;
+}
+
+.u-desktop {
+	display: none;
+}
+
+/* リキッドレイアウト対応 */
+
+html {
+	font-size: 16px;
+}
+
 .footer-layout {
-	margin-top: 6.125rem;
+	margin-top: 5rem;
 }
 
 .top-about-layout {
-	margin-top: 4.875rem;
+	margin-top: 5rem;
 }
 
 .top-campaign-layout {
-	margin-top: 2.5rem;
+	margin-top: 5rem;
 }
 
 .top-contact-layout {
@@ -168,15 +168,15 @@ a {
 }
 
 .top-info-layout {
-	margin-top: 4.25rem;
+	margin-top: 5rem;
 }
 
 .top-price-layout {
-	margin-top: 4.875rem;
+	margin-top: 5rem;
 }
 
 .top-voice-layout {
-	margin-top: 4.9375rem;
+	margin-top: 5rem;
 }
 
 .blog-card {
@@ -214,20 +214,20 @@ a {
 }
 
 .blog-card__title {
+	border-bottom: 0.0625rem solid #408F95;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
-	line-height: 1.5;
+	line-height: 1.3;
+	padding-bottom: 0.1875rem;
 }
 
 .blog-card__text {
-	border-top: 0.0625rem solid #408F95;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
-	margin-top: 0.1875rem;
-	padding-top: 0.9375rem;
+	margin-top: 1rem;
 }
 
 .blog-cards {
@@ -241,10 +241,6 @@ a {
 	justify-items: center;
 	place-content: center;
 	place-items: center;
-}
-
-.blog-cards__item {
-	width: 100%;
 }
 
 .button {
@@ -371,21 +367,21 @@ a {
 }
 
 .campaign-card__title {
+	border-bottom: 0.0625rem solid #408F95;
 	flex-grow: 1;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.5;
 	margin-top: 0.25rem;
+	padding-bottom: 0.5rem;
 }
 
 .campaign-card__text {
-	border-top: 0.0625rem solid #408F95;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.7142857143;
-	margin-top: 0.5rem;
 	padding-top: 0.5625rem;
 	text-align: center;
 }
@@ -717,6 +713,7 @@ a {
 
 .pc-nav__items {
 	display: flex;
+	gap: 2.5rem;
 	height: inherit;
 }
 
@@ -729,7 +726,6 @@ a {
 	color: #fff;
 	display: flex;
 	height: inherit;
-	padding: 0 1.25625rem;
 	position: relative;
 	text-align: center;
 }
@@ -823,17 +819,9 @@ a {
 	height: 100vh;
 }
 
-.swiper-slide {
-	height: inherit;
-}
-
-.swiper-slide picture {
-	height: inherit;
-}
-
 .swiper-slide img {
 	-o-object-fit: cover;
-	height: inherit;
+	height: 100%;
 	object-fit: cover;
 }
 
@@ -960,12 +948,12 @@ a {
 }
 
 .top-about__button-wrap {
-	margin-top: 3.0625rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
 .top-blog {
-	padding-top: 4.875rem;
+	padding-top: 5rem;
 }
 
 .top-blog__inner {
@@ -978,13 +966,11 @@ a {
 }
 
 .top-blog__cards {
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 1.625rem;
 }
 
 .top-blog__button-wrap {
-	margin-top: 2.4375rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
@@ -993,6 +979,7 @@ a {
 }
 
 .top-campaign__container {
+	height: 100%;
 	margin-right: calc(50% - 50vw);
 	margin-top: 1.625rem;
 }
@@ -1043,15 +1030,19 @@ a {
 }
 
 .top-contact__address-logo {
+	border-bottom: 0.0625rem solid #408F95;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 0.3125rem;
+}
+
+.top-contact__address-logo img {
 	height: 4.0625rem;
-	margin: 0 auto;
 	width: 10.875rem;
 }
 
 .top-contact__address {
-	border-top: 0.0625rem solid #408F95;
-	margin-top: 0.375rem;
-	padding-top: 0.875rem;
+	margin-top: 1rem;
 }
 
 .top-contact__address-text {
@@ -1086,7 +1077,7 @@ a {
 }
 
 .top-contact__content {
-	margin-top: 2.5625rem;
+	padding-top: 2.5rem;
 }
 
 .top-contact__title-en {
@@ -1118,7 +1109,7 @@ a {
 }
 
 .top-contact__button-wrap {
-	margin-top: 2.375rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
@@ -1148,20 +1139,20 @@ a {
 }
 
 .top-info__content-title {
+	border-bottom: 0.0625rem solid #408F95;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1.2;
+	padding-bottom: 0.1875rem;
 }
 
 .top-info__content-text {
-	border-top: 0.0625rem solid #408F95;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
-	margin-top: 0.1875rem;
-	padding-top: 0.4375rem;
+	margin-top: 0.5rem;
 }
 
 .top-info__button-wrap {
@@ -1206,7 +1197,6 @@ a {
 }
 
 .top-mv__text {
-	font-family: "Gotu", sans-serif;
 	font-size: 1.25rem;
 	font-weight: 400;
 	line-height: 1.65;
@@ -1235,7 +1225,7 @@ a {
 }
 
 .top-price__lists {
-	margin-top: 2.4375rem;
+	margin-top: 2.5rem;
 }
 
 .top-price__list + .top-price__list {
@@ -1243,7 +1233,7 @@ a {
 }
 
 .top-price__button-wrap {
-	margin-top: 2.375rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
@@ -1256,7 +1246,7 @@ a {
 }
 
 .top-voice__button-wrap {
-	margin-top: 2.5625rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
@@ -1270,16 +1260,15 @@ a {
 }
 
 .voice-card__wrap {
+	align-items: flex-end;
 	display: flex;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 19.5625rem;
-	width: 100%;
+	gap: 0.8125rem;
+	justify-content: space-between;
 }
 
 .voice-card__container {
 	border-bottom: 0.0625rem solid #408F95;
-	width: 47.603%;
+	width: 50%;
 }
 
 .voice-card__label {
@@ -1317,10 +1306,8 @@ a {
 }
 
 .voice-card__image {
-	margin-left: 0.75rem;
 	margin-top: 0.5625rem;
-	max-width: 9.4375rem;
-	width: 52.396%;
+	width: 50%;
 }
 
 .voice-card__image img {
@@ -1335,20 +1322,14 @@ a {
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 1rem;
-	max-width: 19.5625rem;
 }
 
-.voice-cards__item {
-	margin: 0 auto;
-	max-width: 21.5625rem;
-	width: 100%;
-}
-
-.voice-cards__item + .voice-cards__item {
-	margin-top: 2.5625rem;
+.voice-cards {
+	grid-gap: 2.5rem;
+	display: grid;
+	gap: 2.5rem;
+	grid-template-columns: 1fr;
 }
 
 @media screen and (min-width: 768px) {
@@ -1366,7 +1347,7 @@ html {
 }
 
 .footer-layout {
-	margin-top: 10rem;
+	margin-top: 8.75rem;
 }
 
 .top-about-layout {
@@ -1374,7 +1355,7 @@ html {
 }
 
 .top-campaign-layout {
-	margin-top: 7.5rem;
+	margin-top: 8.75rem;
 }
 
 .top-contact-layout {
@@ -1382,7 +1363,7 @@ html {
 }
 
 .top-info-layout {
-	margin-top: 10.25rem;
+	margin-top: 8.75rem;
 }
 
 .top-price-layout {
@@ -1390,7 +1371,7 @@ html {
 }
 
 .top-voice-layout {
-	margin-top: 8.625rem;
+	margin-top: 8.75rem;
 }
 
 .blog-card a {
@@ -1654,7 +1635,7 @@ html {
 }
 
 .top-campaign__button-wrap {
-	margin-top: 4.25rem;
+	margin-top: 4.375rem;
 }
 
 .top-contact__container {
@@ -1676,15 +1657,14 @@ html {
 	width: 47.93%;
 }
 
-.top-contact__address-logo {
+.top-contact__address-logo img {
 	height: 4.6875rem;
 	width: 12.5rem;
 }
 
 .top-contact__address {
 	display: flex;
-	margin-top: 0.5rem;
-	padding-top: 1.5rem;
+	margin-top: 1.5rem;
 }
 
 .top-contact__address-text {
@@ -1705,17 +1685,13 @@ html {
 
 .top-contact__content {
 	border-left: 0.0625rem solid #408F95;
-	margin-top: 1.25rem;
 	padding-left: 5.0625rem;
+	padding-top: 1.25rem;
 	width: 43.137%;
 }
 
 .top-contact__text {
 	margin-top: 0.6875rem;
-}
-
-.top-contact__button-wrap {
-	margin-top: 2.3125rem;
 }
 
 .top-info {
@@ -1747,12 +1723,12 @@ html {
 .top-info__content-title {
 	font-size: 1.5rem;
 	line-height: 1;
+	padding-bottom: 0.4375rem;
 }
 
 .top-info__content-text {
-	margin-top: 0.3125rem;
+	margin-top: 0.4375rem;
 	padding-right: 0.0625rem;
-	padding-top: 0.4375rem;
 }
 
 .top-mv {
@@ -1786,7 +1762,7 @@ html {
 .top-price__container {
 	display: flex;
 	gap: 8.635%;
-	margin-top: 2.4375rem;
+	margin-top: 2.5rem;
 }
 
 .top-price__container::before {
@@ -1812,7 +1788,7 @@ html {
 }
 
 .top-price__button-wrap {
-	margin-top: 4.875rem;
+	margin-top: 5rem;
 }
 
 .top-voice::before {
@@ -1843,7 +1819,7 @@ html {
 }
 
 .top-voice__button-wrap {
-	margin-top: 4.9375rem;
+	margin-top: 5rem;
 }
 
 .voice-card {
@@ -1853,13 +1829,8 @@ html {
 	padding-top: 1.5rem;
 }
 
-.voice-card__wrap {
-	max-width: 29.5rem;
-}
-
 .voice-card__container {
 	margin-top: 1.5rem;
-	width: 58.475%;
 }
 
 .voice-card__category {
@@ -1883,7 +1854,6 @@ html {
 	margin-left: 1rem;
 	margin-top: 0;
 	max-width: 11.25rem;
-	width: 41.525%;
 }
 
 .voice-card__image img {
@@ -1892,22 +1862,10 @@ html {
 
 .voice-card__text {
 	margin-top: 2.5625rem;
-	max-width: 29.5rem;
 }
 
 .voice-cards {
-	grid-gap: 2.5rem;
-	display: grid;
-	gap: 2.5rem;
 	grid-template-columns: repeat(2, 1fr);
-}
-
-.voice-cards__item {
-	max-width: 32.5rem;
-}
-
-.voice-cards__item + .voice-cards__item {
-	margin-top: 0;
 }
 
 }

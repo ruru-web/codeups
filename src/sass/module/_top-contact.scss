@@ -53,9 +53,16 @@
 }
 
 .top-contact__address-logo {
+	display: flex;
+	justify-content: center;
+	padding-bottom: rem(5);
+	border-bottom: rem(1) solid $green;
+	
+}
+
+.top-contact__address-logo img {
 	width: rem(174);
 	height: rem(65);
-	margin: 0 auto;
 
 	@include mq("md") {
 		width: rem(200);
@@ -64,13 +71,10 @@
 }
 
 .top-contact__address {
-	margin-top: rem(6);
-	padding-top: rem(14);
-	border-top: rem(1) solid $green;
+	margin-top: rem(16);
 
 	@include mq("md") {
-		margin-top: rem(8);
-		padding-top: rem(24);
+		margin-top: rem(24);
 		display: flex;
 	}
 }
@@ -127,10 +131,12 @@
 
 
 .top-contact__content {
-	margin-top: rem(41);
+	// margin-top: rem(41);
+	padding-top: rem(40);
 
 	@include mq("md") {
-		margin-top: rem(20);
+		// margin-top: rem(20);
+		padding-top: rem(20);
 		padding-left: rem(81);
 		width: 43.137%;
 		border-left: rem(1) solid $green;
@@ -180,11 +186,10 @@
 }
 
 .top-contact__button-wrap {
-	margin-top: rem(38);
+	margin-top: rem(40);
 	text-align: center;
-
-	@include mq("md") {
-		margin-top: rem(37);
-	}
+	// @include mq("md") {
+	// 	margin-top: rem(40);
+	// }
 }
 

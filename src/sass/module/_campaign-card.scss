@@ -40,21 +40,6 @@
 	}
 }
 
-.campaign-card__tag {
-	// display: inline-block;
-	// text-align: center;
-	// border: rem(1) solid $green;
-	// padding: rem(5) rem(11) rem(1);
-	// font-size: rem(12);
-	// line-height: calc(22/12);
-	// font-weight: $regular;
-	// font-family: "Noto Sans JP", sans-serif;
-	// color: $green;
-
-	// @include mq("md") {
-	// 	padding: rem(7) rem(15) rem(3);
-	// }
-}
 
 .campaign-card__tag-text {
 	display: inline-block;
@@ -73,17 +58,19 @@
 }
 
 .campaign-card__title {
+	padding-bottom: rem(8);
 	flex-grow: 1;
 	margin-top: rem(4);
 	font-size: rem(16);
 	line-height: calc(24/16);
 	font-weight: $medium;
 	font-family: "Noto Sans JP", sans-serif;
+	border-bottom: rem(1) solid $green;
 }
 
 .campaign-card__text {
-	border-top: rem(1) solid $green;
-	margin-top: rem(8);
+	// border-top: rem(1) solid $green;
+	// margin-top: rem(8);
 	padding-top: rem(9);
 	text-align: center;
 	font-size: rem(14);

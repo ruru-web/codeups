@@ -1,29 +1,20 @@
 @use 'global' as *;
 
 .voice-cards {
-
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: rem(40);
 	@include mq("md") {
-		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: rem(40);
 	}
 }
 
-.voice-cards__item {
-	margin: 0 auto;
-	max-width: rem(345);
-	width: 100%;
+// .voice-cards__item {
+// 	margin: 0 auto;
+// 	max-width: rem(345);
+// 	width: 100%;
 
-	@include mq("md") {
-		max-width: rem(520);
-	}
-}
-
-
-.voice-cards__item + .voice-cards__item {
-	margin-top: rem(41);
-
-	@include mq("md") {
-		margin-top: 0;
-	}
-}
+// 	@include mq("md") {
+// 		max-width: rem(520);
+// 	}
+// }

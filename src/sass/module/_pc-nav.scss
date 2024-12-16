@@ -7,6 +7,7 @@
 .pc-nav__items {
 	height: inherit;
 	display: flex;
+	gap: rem(40);
 }
 
 .pc-nav__item {
@@ -14,7 +15,7 @@
 }
 
 .pc-nav__item a {
-	padding: 0 rem(20.1);
+	// padding: 0 rem(20.1);
 	height: inherit;
 	display: flex;
 	align-items: center;
