@@ -1,6 +1,7 @@
 @use 'global' as *;
 
 .blog-card {
+	display: block;
 	height: 100%;
 	padding-top: rem(16);
 	padding-left: rem(16);

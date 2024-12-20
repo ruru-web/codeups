@@ -20,7 +20,7 @@
 	z-index: 1;
 }
 
-.button-arrow1 {
+.button__arrow1 {
 	position: absolute;
 	top: 50%;
 	right: rem(40);
@@ -29,7 +29,7 @@
 	width: rem(40);
 }
 
-.button-arrow2  {
+.button__arrow2  {
 	position: absolute;
 	top: 45%;
 	right: rem(40);
@@ -76,7 +76,7 @@
 	transform: scale(1, 1);  //X軸が広がる
 }
 
-.button:hover .button-arrow1,
-.button:hover .button-arrow2 {
+.button:hover .button__arrow1,
+.button:hover .button__arrow2 {
   background-color: $green;
 }

@@ -210,50 +210,30 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
 
-  //アニメーション
-  // top-blog__cards
-  // gsap.fromTo(".top-blog__cards .top-blog__card",
-  //   {opacity:0, y:100, },
-  //   {opacity:1, y:0, duration: 1,ease: "power2.out", stagger: 0.2})
+    //アニメーション
+  $(document).ready(function () {
+    const leftSlides = $(".mv-loading__split-left .slide");
+    // const leftSlides = $(".mv-loading__split-left");
+    const rightSlides = $(".mv-loading__split-right .slide");
+    // const rightSlides = $(".mv-loading__split-right");
+    const totalSlides = leftSlides.length;
+    let currentIndex = 0;
 
+    // 最初のスライドを表示
+    $(leftSlides[currentIndex]).addClass("active");
+    $(rightSlides[currentIndex]).addClass("active");
+  });
 
-    //ローディング
-  // let tl=gsap.timeline(); //宣言
+  // loading scroll lock
+  if (window.location.pathname === '/index.html') {
+    $(document).ready(function () {
+      // bodyとhtmlのスクロール制御
+      $("html, body").css({ height: "100%", overflow: "hidden" });
 
-  // tl.fromTo(
-  // ".loader__item",
-  // { clipPath:"inset(0% 0% 0% 0%)",},
-  // { clipPath:"inset(0% 0% 100% 0%)",
-  //   duration: 1,
-  //   stagger: 0.2,
-  //   ease: "power3.inOut",
-  // },"+=1")
-
-//   tl.fromTo(
-//     ".swiper-slide__left",
-//     { y:"100%" },
-//     { y:"0%", duration: 1.5, ease: "power2.out" }
-//   )
-//   tl.fromTo(
-//     ".swiper-slide__right",
-//     { y:"100%" },
-//     { y:"0%", duration: 1.5, ease: "power2.out" },
-//     "-=1.3"
-//   )
-
-
-//   tl.fromTo(".top-mv__title",
-//   { opacity:0,},
-//   { opacity:1,}
-//   )
-//   tl.fromTo(".top-mv__text",
-//   { opacity:0,},
-//   { opacity:1,}
-//   )
-
-//   gsap.fromTo(".section-title-en-white span",
-//     {opacity:0,},
-//     {opacity:1, duration:0.7, stagger:0.1, delay:0.5,},
-//   )
-
+      // ローディングアニメーションの完了後にスクロール解除
+      setTimeout(function () {
+        $("html, body").css({ height: "", overflow: "" });
+      }, 3000); // 適切なタイミングに合わせて調整
+    });
+  }
 });

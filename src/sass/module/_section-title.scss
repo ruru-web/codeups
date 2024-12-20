@@ -4,7 +4,7 @@
 	text-align: center;
 }
 
-.section-title-en {
+.section-title__en {
 	font-size: rem(32);
 	line-height: calc(40/32);
 	font-weight: $regular;
@@ -15,7 +15,7 @@
 	}
 }
 
-.section-title-en-white {
+.section-title__en--white {
 	@include mq("md") {
 		color: $white;
 	}
@@ -34,7 +34,7 @@
 
 
 
-.section-title-ja {
+.section-title__ja {
 	margin-top: rem(6);
 	font-size: rem(12);
 	line-height: calc(18/12);
@@ -46,7 +46,7 @@
 	}
 }
 
-.section-title-ja-white {
+.section-title__ja--white {
 	@include mq("md") {
 		color: $white;
 	}

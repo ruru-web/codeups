@@ -4,25 +4,17 @@
 	width: 100%;
 	height: 100vh;
 	min-height: rem(400);
-	@include mq("md") {
-		min-height: rem(500);
-	}
-}
-
-.top-mv__inner {
-	// width: 100%;
-	height: inherit; 
-	//子要素に影響されるため何も指定しなくても問題なし
-}
-
-.top-mv__slider {
-	height: inherit;	//top-mvから引き継ぐ
-	min-height: rem(400);
 	position: relative;
 	@include mq("md") {
 		min-height: rem(500);
 	}
 }
+
+// .top-mv__inner {
+	// width: 100%;
+	// height: inherit; 
+	//子要素に影響されるため何も指定しなくても問題なし
+// }
 
 .top-mv__title-wrap {
 	position: absolute;
@@ -32,8 +24,11 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: $white;
+	// color: $white;
 	text-align: center;
+  color: $green;
+  animation: fadeInOut 3s forwards;
+
 	
 	@include mq("md") {
 		// top: 41.5%;
@@ -42,6 +37,31 @@
   	left: 50%;
 		transform: translate(-50%, -50%);
 	}
+}
+
+@keyframes fadeInOut {
+
+  0%,
+  20% {
+    opacity: 0;
+  }
+
+  20%,
+  60% {
+    opacity: 1;
+  }
+
+  60%,
+  80% {
+    opacity: 0;
+  }
+
+  80%,
+  100% {
+    opacity: 1;
+    /* テキストを表示したままにする */
+    color: #ffffff;
+  }
 }
 
 .top-mv__title {
@@ -66,5 +86,117 @@
 	// margin-right: rem(24);
 	@include mq("md") {
 		// margin-right: rem(45);
+	}
+}
+
+
+.mv-loading {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	animation: out 3s forwards;
+	z-index: 9;
+}
+
+@keyframes out {
+  0%, 80% {
+    opacity: 1;
+    visibility: visible;
+    background-color: $white;
+
+  }
+  90%, 100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    background-color: transparent;
+  }
+}
+
+.mv-loading__container {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	opacity: 0;
+	background-color: transparent;
+	animation: imageFade 3s forwards;
+  /* 新しいアニメーション */
+}
+
+@keyframes imageFade {
+  0%,
+  30% {
+    opacity: 0;
+  }
+
+  40%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.mv-loading__split-left,
+.mv-loading__split-right {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.mv-loading__split-left img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateY(100%);
+}
+
+.mv-loading__split-right img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transform: translateY(100%);
+}
+
+
+.mv-loading__split-left img.active {
+  animation: slideIn 0.8s ease-in-out forwards;
+  animation-delay: 0.8s;;
+}
+
+.mv-loading__split-right img.active {
+  animation: slideIn 0.8s ease-in-out forwards;
+  animation-delay: 0.9s;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.top-mv__slider {
+	height: inherit;	//top-mvから引き継ぐ
+	min-height: rem(400);
+	position: relative;
+	@include mq("md") {
+		min-height: rem(500);
 	}
 }

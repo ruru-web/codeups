@@ -4,6 +4,14 @@
 	// height: auto;
 }
 
+.campaign-cards__cards {
+	padding-bottom: rem(10);
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	height: 100%;
+}
+
+
 .campaign-cards__item {
 	height: auto;
 	width: 100%;

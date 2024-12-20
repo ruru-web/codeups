@@ -1,18 +1,119 @@
 @use 'global' as *;
 
 // .loader {
-// 	position: fixed;
-// 	z-index: 100;
-// 	height: 100vh;
-// 	width: 100%;
-// 	top: 0;
-// 	right: 0;
-// 	left: 0;
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// width: 100%;
+	// height: 100%;
+	// background-color: green;
+	// overflow: hidden;
+	// display: flex;
 
-// 	display: grid;
-// 	grid-template-columns: 1fr 1fr;
+// 	height: 100vh;
+// 	overflow: hidden;
+// 	position: fixed;
+// 	width: 100%;
+// 	z-index: 8;
+// }
+
+// .loader__container {
+// 	background-color: transparent;
+// 	display: flex;
+// 	height: 100vh;
+// 	position: relative;
+// 	width: 100%;
+// 	opacity: 0;
+// 	overflow: hidden;
 // }
 
 // .loader__item {
-// 	background: $green;
+// 	width: 50%;
+// 	height: 100%;
+// 	position: relative;
+// 	// top: 100%;
+// 	top: 0%;
+
+// 	transition: transform 1s ease;
+// }
+
+// loader__item-left {
+// 	height: 100%;
+// 	overflow: hidden;
+// 	position: relative;
+// 	width: 50%;
+// }
+
+
+// .loader__item-left img {
+// 	// width: 50%;
+// 	width: 100%;
+// 	height: 100%;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+
+// 	// transform: translateY(100%);
+
+// }
+
+// .loader__item-right{
+// 	height: 100%;
+// 	overflow: hidden;
+// 	position: relative;
+// 	width: 50%;
+// }
+
+// .loader {
+// 	position: relative;
+// }
+
+// .top-mv__title--green,
+// .top-mv__text--green {
+// 	color: $green;
+// }
+
+// .loader__container {
+// 	position: relative;
+// 	width: 100%;
+// 	margin: 0;
+// 	overflow: hidden;
+// 	background-color: #fff;
+// }
+
+// .loader__container img {
+// 	width: 100%;
+// 	display: block;
+// }
+
+// .loader__item {
+// 	position: absolute;
+// 	top: 0;
+// 	width: 50%;
+// 	height: 100%;
+// 	background-size: cover;
+// 	background-repeat: no-repeat;
+// 	opacity: 0;
+// }
+
+// .loader__item-left {
+// 	left: 0;
+// 	background-image: url(../images/common/top-mv1-sp.jpg);
+// 	background-position: left;
+// 	transform: translateY(100%);
+
+// 	@include mq("md") {
+// 		background-image: url(../images/common/top-mv1-pc.jpg);
+// 	}
+// }
+
+// .loader__item-right {
+// 	right: 0;
+// 	background-image: url(../images/common/top-mv1-sp.jpg);
+// 	background-position: right;
+// 	transform: translateY(100%);
+
+// 	@include mq("md") {
+// 		background-image: url(../images/common/top-mv1-pc.jpg);
+// 	}
 // }

@@ -11,35 +11,31 @@
 	position: relative;
 }
 
-.top-campaign__container {
+.top-campaign__swiper {
 	margin-top: rem(26);
-	// margin-right: calc(50% - 50vw + rem(15));
-	margin-right: calc(50% - 50vw);
-	// width: 100vw;
 	height: 100%;
-	
+	margin-right: calc(50% - 50vw);
+	// padding-bottom: rem(10);
 	@include mq("md") {
 		margin-top: rem(38);
 	}
 }
 
 // Google Chrome,Microsoft Edge
-.top-campaign__container::-webkit-scrollbar {
-  display: none;
+// .top-campaign__swiper::-webkit-scrollbar {
+//   display: none;
+// }
+
+
+
+.top-campaign__wrap{
+	position: absolute;
+	top: 0;
+	right: 2.1%;
+	width: rem(242);
+	height: rem(82);
 }
 
-.top-campaign__swiper {
-	height: 100%;
-	// padding-bottom: rem(10);
-	
-}
-
-.top-campaign__cards {
-	padding-bottom: rem(10);
-	scrollbar-width: none;
-	-ms-overflow-style: none;
-	height: 100%;
-}
 
 .top-campaign__button-wrap {
 	margin-top: rem(30);

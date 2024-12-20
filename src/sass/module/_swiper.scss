@@ -2,7 +2,8 @@
 
 .swiper-wrapper {
 	// height: inherit;
-	height: 100vh;
+	// height: 100vh;
+	height: 100%;
 	//Swiperの動作で高さを明示することが推奨されるため、height: 100vh;が適切
 }
 
@@ -19,14 +20,6 @@
 	// height: inherit;
 	height: 100%;
 	object-fit: cover;
-}
-
-.swiper-button__wrap {
-	position: absolute;
-	top: 0;
-	right: 2.1%;
-	width: rem(242);
-	height: rem(82);
 }
 
 .swiper-button-prev:hover,
