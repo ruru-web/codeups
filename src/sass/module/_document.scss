@@ -26,8 +26,8 @@
 	transform: scaleX(-1);
 	//x軸に反転
 	@include mq("md") {
-		top: -9.5%;
-		left: calc(50% - min(46vw, rem(610)));
+		top: -7.5%;
+		left: calc(50% - min(46vw, rem(621)));
 		width: rem(301);
 		height: rem(138);
 	}

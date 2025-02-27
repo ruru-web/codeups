@@ -16,6 +16,7 @@
 	// 要素の領域に画像全体が収まるように拡大縮小される
 	transform: scaleX(-1);
 	//x軸に反転
+	z-index: -1;
 
 	@include mq("md") {
 		width: rem(301);

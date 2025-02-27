@@ -230,6 +230,10 @@ html {
 	margin-top: 1.875rem;
 }
 
+.thanks-footer-layout {
+	margin-top: 9rem;
+}
+
 .thanks-layout {
 	margin-top: 3.25rem;
 }
@@ -264,10 +268,6 @@ html {
 
 .voice-page-layout {
 	margin-top: 3.25rem;
-}
-
-.thanks-footer-layout {
-	margin-top: 9rem;
 }
 
 .about-gallery {
@@ -570,6 +570,7 @@ html {
 	top: -0.35%;
 	transform: scaleX(-1);
 	width: 7.5rem;
+	z-index: -1;
 }
 
 .blog-page__cards {
@@ -3245,11 +3246,11 @@ html {
 }
 
 .document-contact-layout {
-	margin-top: 7.5rem;
+	margin-top: 8.75rem;
 }
 
 .document-layout {
-	margin-top: 11.0625rem;
+	margin-top: 9.625rem;
 }
 
 .faq-page-contact-layout {
@@ -3282,6 +3283,10 @@ html {
 
 .sitemap-layout {
 	margin-top: 8rem;
+}
+
+.thanks-footer-layout {
+	margin-top: 7.5rem;
 }
 
 .thanks-layout {
@@ -3318,10 +3323,6 @@ html {
 
 .voice-page-layout {
 	margin-top: 9.375rem;
-}
-
-.thanks-footer-layout {
-	margin-top: 7.5rem;
 }
 
 .about-gallery::after {
@@ -3649,8 +3650,8 @@ html {
 
 .document:before {
 	height: 8.625rem;
-	left: calc(50% - min(46vw, 38.125rem));
-	top: -9.5%;
+	left: calc(50% - min(46vw, 38.8125rem));
+	top: -7.5%;
 	width: 18.8125rem;
 }
 
