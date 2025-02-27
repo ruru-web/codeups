@@ -169,14 +169,19 @@
 }
 
 
-.mv-loading__split-left img.active {
+
+// .mv-loading__split-left img.active {
+.mv-loading__split-left img {
   animation: slideIn 0.8s ease-in-out forwards;
-  animation-delay: 0.8s;;
+  // animation-delay: 0.8s;
+  animation-delay: 0.5s;
 }
 
-.mv-loading__split-right img.active {
+// .mv-loading__split-right img.active {
+.mv-loading__split-right img {
   animation: slideIn 0.8s ease-in-out forwards;
-  animation-delay: 0.9s;
+  // animation-delay: 0.9s;
+  animation-delay: 1s;
 }
 
 @keyframes slideIn {

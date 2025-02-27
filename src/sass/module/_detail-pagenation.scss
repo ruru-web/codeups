@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.detail-pagination {
+	display: flex;
+	gap: rem(80);
+	justify-content: center;
+	color: $green;
+}

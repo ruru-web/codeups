@@ -1,0 +1,83 @@
+@use 'global' as *;
+
+.error {
+	position: relative;
+	padding-top: rem(52);
+	padding-bottom: rem(40);
+	background-color: $green;
+	text-align: center;
+	
+	@include mq("md") {
+		padding-top: rem(120);
+		padding-bottom: rem(149);
+	}
+}
+
+.error::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -57%);
+	background-image: url(../images/common/bg-whale-right.svg);
+	// background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: rem(345);
+	height: rem(345);
+
+	@include mq("md") {
+		width: rem(698);
+		height: rem(698);
+		transform: translate(-77%, -52%);
+	}
+}
+
+
+.error__container {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+.error__title {
+	// display: inline-block;
+	padding-left: rem(38);
+	font-size: rem(80);
+	line-height: calc(96/80);
+	letter-spacing: 0.5em;
+	font-weight: $regular;
+	font-family: "Lato", sans-serif;
+	color: $white;
+
+	@include mq("md") {
+		padding-left: rem(79);
+		font-size: rem(160);
+		line-height: calc(192/160);
+	}
+}
+
+// .error__container {
+// 	margin-top: rem(24);
+// }
+
+.error__text {
+	margin-top: rem(-4);
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-weight: $regular;
+	font-family: "Lato", sans-serif;
+	color: $white;
+
+	@include mq("md") {
+		margin-top: rem(24);
+	}
+}
+
+.error__button-wrap {
+	margin-top: rem(40);
+
+	@include mq("md") {
+		margin-top: rem(78);
+	}
+}

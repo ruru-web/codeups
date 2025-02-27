@@ -1,0 +1,105 @@
+@use 'global' as *;
+
+.sitemap {
+	color: $green2;
+	position: relative;
+}
+
+
+.sitemap:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: rem(120);
+	height: rem(55);
+	top: -0.5%;
+	left: calc(50% - min(46vw, rem(620)));
+	// left: calc(50% - 43vw;
+	// left: calc(50% - rem(620));
+	background-image: url(../images/common/fish-green.svg);
+	background-size: cover;
+	// 要素の領域に画像全体が収まるように拡大縮小される
+	transform: scaleX(-1);
+	//x軸に反転
+	
+	@include mq("md") {
+		display: none;
+	}
+}
+
+
+
+.sitemap__nav {
+	display: flex;
+
+	@include mq("md") {
+		justify-content: space-between;
+		// max-width: rem(1008);
+	}
+}
+
+.sitemap__container {
+	width: 50%;
+	@include mq("md") {
+		display: contents;
+	}
+}
+
+.sitemap__container + .sitemap__container {
+	// margin-left: rem(18);
+	padding-left: rem(22);
+}
+
+.sitemap__item {
+	padding: rem(6.5) 0;
+}
+
+.sitemap__item-link  {
+	display: block;
+	padding-top: rem(12);
+	padding-bottom: rem(12);
+	padding-left: rem(22);
+	font-size: rem(16);
+	line-height: calc(18/16);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	align-items: center;
+	
+}
+
+.sitemap__item-link--list {
+	font-weight: $bold;
+}
+
+.sitemap__item-link--list::before {
+	// content: url(../images/common/icon-starfish.svg);
+	
+	content: "";
+ display: inline-block;
+	width: rem(18);
+	height: rem(18);
+	margin-right: rem(4);
+	margin-left: rem(-22);
+	margin-top: rem(2);
+	vertical-align: text-top;
+	// filter: brightness(0) invert(0); // 疑似要素の画像を白く変更
+	// color: $green2;
+	mask-image: url(../images/common/icon-starfish.svg);
+	background-color: $green2;
+}
+
+// .sitemap__item-link--list::before {
+//   content: "";
+//   display: inline-block;
+//   width: rem(18);
+//   height: rem(18);
+//   margin-right: rem(4);
+//   margin-left: rem(-22);
+//   margin-top: rem(2);
+//   vertical-align: text-top;
+//   background-color: #0D2936; // 色変更
+//   -webkit-mask-image: url(../images/common/icon-starfish.svg);
+//   mask-image: url(../images/common/icon-starfish.svg);
+//   -webkit-mask-size: cover;
+//   mask-size: cover;
+// }

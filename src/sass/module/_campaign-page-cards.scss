@@ -1,0 +1,23 @@
+@use 'global' as *;
+
+
+
+
+.campaign-page-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+	gap: rem(40);
+	place-content: center;
+	place-items: center;
+
+	@include mq("md") {
+		grid-template-columns: repeat(2, 1fr);
+		align-items: flex-start;
+		column-gap: rem(40);
+		row-gap: rem(80);
+	}
+}
+
+.campaign-page-cards__itme {
+	
+}

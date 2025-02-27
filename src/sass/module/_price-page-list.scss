@@ -1,0 +1,50 @@
+@use 'global' as *;
+
+.price-page-list {
+	@include mq("md") {
+		margin: 0 auto;
+		max-width: rem(700);
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+
+.price-page-list__title {
+	padding-top: rem(8);
+	padding-bottom: rem(8);
+	background-color: $green;
+	color: $white;
+	min-height: rem(35);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: $bold;
+
+	@include mq("md") {
+		width: 28.5714%;
+		flex-flow: column-reverse;
+	}
+}
+
+.price-page-list__title::before {
+	margin-right: rem(8);
+	content: "";
+	width: rem(24);
+	height: rem(24);
+	background-size: contain;
+	background-repeat: no-repeat;
+	// flex-shrink: 0;
+	background-image: url(../images/common/icon-whale-right.svg);
+	filter: brightness(0) invert(1); // 疑似要素の画像を白く変更
+
+	@include mq("md") {
+		margin-top: rem(7);
+		margin-right: 0;
+		width: rem(64);
+		height: rem(64);
+	}
+}

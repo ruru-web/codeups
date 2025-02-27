@@ -1,0 +1,46 @@
+@use 'global' as *;
+
+.contact-page {
+	position: relative;
+}
+
+.contact-page:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: rem(120);
+	height: rem(55);
+	top: -2.4%;
+	left: calc(50% - min(46vw, rem(620)));
+	// left: calc(50% - 43vw;
+	// left: calc(50% - rem(620));
+	background-image: url(../images/common/fish-green.svg);
+	// background-size: contain;
+	background-size: cover;
+	// 要素の領域に画像全体が収まるように拡大縮小される
+	transform: scaleX(-1);
+	//x軸に反転
+	@include mq("md") {
+		top: -5.2%;
+		left: calc(50% - min(48vw, rem(620)));
+		// left: calc(50% - 43vw);
+		// left: calc(50% - rem(620));
+		width: rem(301);
+		height: rem(138);
+	}
+}
+
+.contact-page__inner {
+	width: 100%;
+	max-width: 600px;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	margin-right: auto;
+	margin-left: auto;
+
+	@include mq("md") {
+		max-width: 750px;
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
+}

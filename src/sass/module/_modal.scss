@@ -1,0 +1,53 @@
+@use 'global' as *;
+
+.modal {
+	// padding: rem(91) 0;
+	// background-color: rgba(32, 32, 32, 0.8);
+
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(32, 32, 32, 0.8);
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+
+
+.modal__img {
+	// width: 100%;
+	// display: flex;
+  // justify-content: center; /* 画像を中央揃え */
+  // align-items: center;
+  // width: 100%;
+  // height: auto; /* 縦長画像の高さ調整の基礎 */
+  // max-height: 100vh; /* 画像の最大高さを画面の高さに制限 */
+  // overflow: hidden; /* はみ出し部分を非表示にする */
+}
+
+.modal__img img {
+	// width: 100%;
+	// aspect-ratio: 580/369;
+	// object-fit: cover;
+	// display: block;
+  // max-width: 100%; /* 横長画像は幅をモーダル内に収める */
+  // max-height: 100%; /* 縦長画像は高さを画面内に収める */
+  // object-fit: contain; /* 縦横比を保ちながら全体を収める */
+}
+
+.modal__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+	//画像の中心点がモーダルの中央に一致
+  object-fit: contain; //アスペクト比を保ち、指定された範囲内に収める
+  width: 80%;
+  height: 80%;
+  // max-width: rem(2000);
+  max-width: rem(920);
+}

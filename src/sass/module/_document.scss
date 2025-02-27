@@ -1,0 +1,78 @@
+@use 'global' as *;
+
+.document {
+	position: relative;
+	font-size: rem(16);
+	line-height: calc(32/16);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green2;
+}
+
+.document:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: rem(120);
+	height: rem(55);
+	top: -1%;
+	left: calc(50% - min(46vw, rem(620)));
+	// left: calc(50% - 43vw;
+	// left: calc(50% - rem(620));
+	background-image: url(../images/common/fish-green.svg);
+	// background-size: contain;
+	background-size: cover;
+	// 要素の領域に画像全体が収まるように拡大縮小される
+	transform: scaleX(-1);
+	//x軸に反転
+	@include mq("md") {
+		top: -9.5%;
+		left: calc(50% - min(46vw, rem(610)));
+		width: rem(301);
+		height: rem(138);
+	}
+}
+
+.document__inner {
+	width: 100%;
+	max-width: 600px;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	margin-right: auto;
+	margin-left: auto;
+
+	@include mq("md") {
+		max-width: rem(850);
+		padding-right: rem(25);
+		padding-left: $padding-pc;
+	}
+}
+
+
+.document__title {
+	@include mq("md") {
+		font-size: rem(32);
+		line-height: calc(38/32);
+		font-emphasize: $medium;
+		font-family: "Noto Sans JP", sans-serif;
+	}
+}
+
+.document__wrap {
+	margin-top: rem(32);
+
+	@include mq("md") {
+		margin-top: rem(43);
+	}
+}
+
+
+.document__contents + .document__contents {
+	margin-top: rem(32);
+}
+
+.document__number {
+	padding-left: 23px;
+	list-style-type: decimal;
+}
+

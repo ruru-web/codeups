@@ -1,0 +1,57 @@
+@use 'global' as *;
+
+.sidebar {
+	// @include mq("md") {
+	// 	width: 27.2222%;
+	// }
+}
+
+.sidebar__wrap + .sidebar__wrap {
+	margin-top: rem(80);
+}
+
+.sidebar__title-wrap {
+	border-left: 8px solid $green;
+	display: flex;
+	align-items: center;
+}
+
+.sidebar__title-wrap::before {
+	content: "";
+	margin-left: rem(16);
+	background-image: url(../images/common/icon-whale-right_darkgreen.svg);
+	display: inline-block;
+	width: rem(50);
+	height: rem(50);
+	background-size: contain;
+	background-repeat: no-repeat;
+	flex-shrink: 0;
+}
+
+.sidebar__title {
+	margin-left: rem(8);
+	font-size: rem(24);
+	line-height: calc(29/24);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green2;
+}
+
+.sidebar__contents {
+	margin-top: rem(24);
+}
+
+
+.sidebar__contents-item + .sidebar__contents-item{
+	margin-top: rem(24);
+}
+
+.sidebar__campaign-cards__item + .sidebar__campaign-cards__item {
+	margin-top: rem(40);
+}
+
+.sidebar__button-wrap {
+	margin-top: rem(40);
+	text-align: center;
+}
+

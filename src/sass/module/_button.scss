@@ -20,6 +20,13 @@
 	z-index: 1;
 }
 
+.button-white {
+	padding: rem(16) rem(58) rem(16) 0;
+	background-color: $white;
+	color: $green;
+	border: rem(1) solid $white;
+}
+
 .button__arrow1 {
 	position: absolute;
 	top: 50%;
@@ -27,6 +34,10 @@
 	height: rem(1);
   background-color: $white;
 	width: rem(40);
+}
+
+.button__arrow1-white {
+	background-color: $green;
 }
 
 .button__arrow2  {
@@ -37,6 +48,10 @@
 	height: rem(1);
   transform: rotate(40deg);
   background-color: $white;
+}
+
+.button__arrow2-white {
+	background-color: $green;
 }
 
 .button::before {
@@ -53,6 +68,10 @@
 	z-index: -2;
 }
 
+.button-white::before {
+	border: rem(1) solid $white;
+}
+
 .button::after {
 	content: "";
 	background-color: $white;
@@ -67,10 +86,19 @@
 	z-index: -1;
 }
 
+.button-white::after {
+	background-color: $green;
+}
+
 .button:hover {
 	color: $green;
 	opacity: 1;
 }
+
+.button-white:hover {
+	color: $white;
+}
+
 
 .button:hover::after {
 	transform: scale(1, 1);  //X軸が広がる
@@ -79,4 +107,9 @@
 .button:hover .button__arrow1,
 .button:hover .button__arrow2 {
   background-color: $green;
+}
+
+.button-white:hover .button__arrow1,
+.button-white:hover .button__arrow2 {
+  background-color: $white;
 }

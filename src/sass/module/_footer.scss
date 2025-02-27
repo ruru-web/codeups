@@ -93,11 +93,11 @@
 	
 }
 
-.footer__item-list {
+.footer__item-link--list {
 	font-weight: $bold;
 }
 
-.footer__item-list::before {
+.footer__item-link--list::before {
 	content: url(../images/common/icon-starfish.svg);
 	display: inline-block;
 	width: rem(18);

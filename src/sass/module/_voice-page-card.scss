@@ -1,0 +1,132 @@
+@use 'global' as *;
+
+.voice-page-card {
+	padding-top: rem(15);
+	padding-left: rem(16);
+	padding-right: rem(16);
+	padding-bottom: rem(24);
+	height: 100%;
+	box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+
+	@include mq("md") {
+		padding-top: rem(24);
+		padding-left: rem(24);
+		padding-right: rem(24);
+		padding-bottom: rem(23);
+	}
+}
+
+.voice-page-card__wrap {
+	display: flex;
+	gap: rem(13);
+	justify-content: space-between;
+	align-items: normal;
+
+	@include mq("md") {
+		gap: rem(16);
+	}
+}
+
+.voice-page-card__container {
+	border-bottom: rem(1) solid $green;
+	// width: 47.603%;
+	width: 50%;
+	@include mq("md") {
+		margin-top: rem(24);
+		width: 100%;
+	}
+}
+
+.voice-page-card__category {
+	@include mq("md") {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+}
+
+.voice-page-card__label {
+	display: block;
+	font-size: rem(12);
+	line-height: calc(18/12);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green2;
+}
+
+.voice-page-card__tag {
+	display: inline-block;
+	font-size: rem(12);
+	line-height: calc(22/12);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green;
+	padding: rem(4) rem(11) rem(2);
+	border: rem(1) solid $green;
+	text-align: center;
+
+	@include mq("md") {
+		padding: rem(7) rem(15) rem(3);
+	}
+}
+
+.voice-page-card__title {
+	margin-top: rem(6);
+	font-size: rem(16);
+	line-height: calc(23/16);
+	font-weight: $medium;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green2;
+	overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 任意の行数を指定 */
+
+	@include mq("md") {
+		margin-top: rem(9);
+		font-size: rem(24);
+		line-height: calc(35/24);
+		-webkit-line-clamp: 2; /* 任意の行数を指定 */
+	}
+}
+
+.voice-page-card__image {
+	margin-top: rem(9);
+	// margin-left: rem(12);
+	// max-width: rem(151);
+	// width: 100%;
+	// width: 52.396%;
+	width: 50%;
+
+	@include mq("md") {
+		margin-top: 0;
+		// margin-left: rem(16);
+		max-width: rem(180);
+		width: 100%;
+	}
+}
+
+.voice-page-card__image img {
+	width: 100%;
+	aspect-ratio: 151/117;
+	object-fit: cover;
+
+	@include mq("md") {
+		aspect-ratio: 180/140;
+	}
+}
+
+.voice-page-card__text {
+	margin-top: rem(16);
+	// max-width: rem(313);
+	// margin-inline: auto;
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+
+	@include mq("md") {
+		margin-top: rem(41);
+		// max-width: rem(472);
+	}
+}

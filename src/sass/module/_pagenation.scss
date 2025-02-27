@@ -1,0 +1,88 @@
+@use 'global' as *;
+
+.pagination {
+ display: flex;
+ gap: rem(40);
+ justify-content: center;
+ color: $green;
+}
+
+.pagination__lists {
+	display: flex;
+	gap: rem(12);
+}
+
+.pagination__list {
+	border: rem(1) solid $green;
+	font-size: rem(16);
+	line-height: calc(19/16);
+	font-weight: $bold;
+	font-family: "Lato", sans-serif;
+	background-color: $white;
+	width: rem(38);
+	height: rem(38);
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+}
+
+.pagination__list:hover {
+	background-color: $green;
+	color: $white;
+}
+
+.pagination__list--green {
+	color: $white;
+	background-color: $green;
+}
+
+.pagination__list a {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	color: inherit
+}
+
+
+
+.pagination__list a:hover::before {
+	color: $white;
+}
+
+.pagination__list--left,
+.pagination__list--right {
+	position: relative;
+}
+
+.pagination__list--left a::before {
+	content: "";
+	position: absolute;
+	top: rem(12);
+	left: rem(15);
+	width: rem(13);
+	height: rem(13);
+	border-top: rem(1) solid $green;
+	border-left: rem(1) solid $green;
+	transform: rotate(-45deg);
+}
+
+.pagination__list--right a::before {
+	content: "";
+	position: absolute;
+	top: rem(12);
+	right: rem(15);
+	width: rem(13);
+	height: rem(13);
+	border-top: rem(1) solid $green;
+	border-right: rem(1) solid $green;
+	transform: rotate(45deg);
+}
+
+.pagination__list--left a:hover::before {
+	border-top: rem(1) solid $white;
+	border-left: rem(1) solid $white;
+}
+.pagination__list--right a:hover::before {
+	border-top: rem(1) solid $white;
+	border-right: rem(1) solid $white;
+}

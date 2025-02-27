@@ -1,0 +1,41 @@
+@use 'global' as *;
+
+.page-tab {
+	// display: flex;
+}
+
+.page-tab__menu {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: rem(16) rem(20);
+
+	@include mq("md") {
+		grid-auto-flow: column;
+		gap: rem(32);
+		justify-self: start;
+	}
+}
+
+.page-tab__menu-item {
+	height: rem(34);
+	padding: rem(6);
+
+	font-size: rem(14);
+	line-height: calc(22/14);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green;
+	border: rem(1) solid $green;
+	background-color: $white;
+	text-align: center;
+	cursor: pointer;
+
+	@include mq("md") {
+		width: rem(162);
+	}
+}
+
+.page-tab__menu-item.is-active {
+	color: $white;
+	background-color: $green;
+}

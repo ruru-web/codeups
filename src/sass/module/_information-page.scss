@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.information-page {
+  position: relative;
+}
+
+.information-page::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	width: rem(120);
+	height: rem(55);
+	top: -15%;
+	left: calc(50% - min(46vw, rem(620)));
+	background-image: url(../images/common/fish-green.svg);
+	background-size: cover;
+	// 要素の領域に画像全体が収まるように拡大縮小される
+	transform: scaleX(-1);
+	//x軸に反転
+
+	@include mq("md") {
+		width: rem(301);
+		height: rem(138);
+		top: -15%;
+		left: calc(50% - min(48vw, rem(620)));
+
+	}
+}
+
+.information-page__inner {
+}
+
+.information-page__tab {
+}

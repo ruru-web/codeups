@@ -11,33 +11,41 @@
 	box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
 }
 
-.blog-card a {
-	@include mq("md") {
-		display: block;
-		height: 100%;
+.blog-card:hover {
+	// .blog-card__image  {
+	// 	overflow: hidden;
+	// }
+	.blog-card__image img {
+		transform: scale(1.4);
+		opacity: 1;
 	}
 }
+
+// .blog-card a {
+// 	@include mq("md") {
+// 		display: block;
+// 		height: 100%;
+// 	}
+// }
 
 
 
 .blog-card__image {
-	// max-width: rem(301);
 	width: 100%;
-	// margin-inline: auto;
-
-	// @include mq("md") {
-	// 	max-width: initial;
-	// }
+	overflow: hidden;
 }
 
 .blog-card__image img {
+	transition-duration: 0.5s;
 	width: 100%;
 	aspect-ratio: 301/201;
 	object-fit: cover;
 }
 
+
+
 .blog-card__body {
-	margin-top: rem(20);
+	margin-top: rem(21);
 	// max-width: rem(301);
 	width: 100%;
 	margin-inline: auto;
@@ -54,7 +62,7 @@
 }
 
 .blog-card__title {
-	padding-bottom: rem(3);
+	padding-bottom: rem(4);
 	font-size: rem(16);
 	// line-height: calc(24/16);
 	line-height: 1.3;

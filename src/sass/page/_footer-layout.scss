@@ -1,9 +1,9 @@
 @use 'global' as *;
 
 .footer-layout {
-	margin-top: rem(80);
+	margin-top: rem(100);
 
 	@include mq("md") {
-		margin-top: rem(140);
+		margin-top: rem(160);
 	}
 }

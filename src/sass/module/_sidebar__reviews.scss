@@ -1,0 +1,36 @@
+@use 'global' as *;
+
+.sidebar__reviews-image {
+	width: 100%;
+}
+
+
+.sidebar__reviews-image img {
+	width: 100%;
+	aspect-ratio: 294/218;
+	object-fit: cover;
+}
+
+.sidebar__reviews-label {
+	margin-top: rem(16);
+	font-size: rem(12);
+	line-height: calc(18/12);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green2;
+}
+
+.sidebar__reviews-title {
+	margin-top: rem(8);
+	font-size: rem(24);
+	// line-height: calc(29/24);
+	line-height: 1.51;
+	font-weight: $medium;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green2;
+}
+
+.sidebar__reviews__button-wrap {
+	margin-top: rem(40);
+	text-align: center;
+}

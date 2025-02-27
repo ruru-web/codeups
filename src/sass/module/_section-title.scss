@@ -22,11 +22,11 @@
 }
 
 
-.section-title-en::first-letter {
+.section-title__en::first-letter {
 	color: $green;
 }
 
-.section-title-en-white::first-letter {
+.section-title__en-white::first-letter {
 	@include mq("md") {
 		color: $green3;
 	}

@@ -1,0 +1,45 @@
+@use 'global' as *;
+
+.sidebar__card {
+	box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, .25);
+	padding: rem(16);
+}
+
+.sidebar__card-item {
+	display: flex;
+	gap: rem(16);
+	place-content: center;
+	// padding-left: rem(16);
+	// padding-right: rem(16);
+}
+
+.sidebar__card-image {
+	width: 46.1632%;
+
+}
+
+.sidebar__card-image img {
+	width: 100%;
+	aspect-ratio: 121/90;
+	object-fit: cover;
+}
+
+.sidebar__card-text {
+	width: 47.7099%;
+	color: $green2;
+}
+
+.sidebar__card-date {
+	display: block;
+	font-size: rem(12);
+	line-height: calc(18/12);
+	font-weight: $regular;
+}
+
+.sidebar__card-title {
+	margin-top: rem(6);
+	font-size: rem(16);
+	line-height: calc(19/16);
+	font-weight: $medium;
+	font-family: "Noto Sans JP", sans-serif;
+}

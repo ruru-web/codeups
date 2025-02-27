@@ -1,0 +1,38 @@
+@use 'global' as *;
+
+.about-gallery {
+	position: relative;
+}
+
+.about-gallery::after {
+	content: "";
+	display: none;
+	position: absolute;
+	width: rem(109);
+	height: rem(50);
+	top: -4.3%;
+	right: calc(50% - min(46vw, rem(280)));
+	background-image: url(../images/common/fish-green.svg);
+	// background-size: contain;
+	background-size: cover;
+	// 要素の領域に画像全体が収まるように拡大縮小される
+
+	@include mq("md") {
+		display: block;
+		width: rem(301);
+		height: rem(138);
+		top: -4.8%;
+		right: calc(50% - min(48vw, rem(642)));
+		// right: calc(50% - 46.5vw);
+		// right: calc(50% - rem(671));
+	}
+}
+
+
+.about-gallery__list {
+	margin-top: rem(40);
+
+	@include mq("md") {
+		margin-top: rem(80);
+	}
+}

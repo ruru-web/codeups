@@ -1,0 +1,146 @@
+@use 'global' as *;
+
+.blog-page-detail {
+	position: relative;
+}
+
+.blog-page-detail::before {
+	content: "";
+	position: absolute;
+	width: rem(120);
+	height: rem(55);
+	top: -0.55%;
+	left: calc(50% - min(46vw, rem(620)));
+	background-image: url(../images/common/fish-green.svg);
+	background-size: cover;
+	// 要素の領域に画像全体が収まるように拡大縮小される
+	transform: scaleX(-1);
+	//x軸に反転
+
+	@include mq("md") {
+		width: rem(301);
+		height: rem(138);
+		top: -3%;
+		left: calc(50% - min(48vw, rem(620)));
+
+	}
+}
+
+.blog-page-detail__inner {
+	@include mq("md") {
+		display: flex;
+		gap: rem(86);
+	}
+}
+
+.blog-page-detail__main {
+	@include mq("md") {
+		// width: 65.3703%;
+		width: 64.99535%;
+	}
+}
+
+.blog-page-detail-date {
+	font-size: rem(14);
+	line-height: calc(18/14);
+	font-weight: $regular;
+	color: $green2;
+}
+
+.blog-page-detail__title {
+	margin-top: rem(8);
+	font-size: rem(24);
+	line-height: calc(29/24);
+	font-weight: $medium;
+	color: $green2;
+	font-family: "Noto Sans JP", sans-serif;
+	padding-bottom: rem(6);
+	border-bottom: 1px solid $green;
+
+	@include mq("md") {
+		font-size: rem(32);
+		line-height: calc(38/32);
+		padding-bottom: rem(2);
+	}
+}
+
+.blog-page-detail__image {
+	margin-top: rem(24);
+	width: 100%;
+
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+.blog-page-detail__image img {
+	aspect-ratio: 700/468;
+	object-fit: cover;
+	width: 100%;
+}
+
+.blog-page-detail__text {
+	margin-top: rem(24);
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-weight: $regular;
+	color: $black;
+	font-family: "Noto Sans JP", sans-serif;
+
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+.blog-page-detail__list {
+	margin-top: rem(24);
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-weight: $regular;
+	color: $black;
+	font-family: "Noto Sans JP", sans-serif;
+
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+.blog-page-detail__list-item + .blog-page-detail__list-item {
+	margin-top: rem(4);
+}
+
+.blog-page-detail__list-item::before {
+	background-image: url(../images/common/icon-starfish-green.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	display: inline-block;
+	flex-shrink: 0;
+	height: 18px;
+	width: 18px;
+}
+
+.blog-page-detail__list-item span {
+	margin-left: rem(10);
+}
+
+.blog-page-detail__pagination {
+	margin-top: rem(40);
+
+	@include mq("md") {
+		margin-top: rem(80);
+	}
+}
+
+.blog-page-detail__side {
+	margin-top: rem(80);
+	padding-right: rem(25);
+	padding-left: rem(25);
+	
+	@include mq("md") {
+		margin-top: 0;
+		padding-right: 0;
+		padding-left: 0;
+		width: 27.2980%;
+	}
+}

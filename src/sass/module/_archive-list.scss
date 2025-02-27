@@ -1,0 +1,33 @@
+@use 'global' as *;
+
+.archive-list {
+	margin-left: rem(2);
+	font-size: rem(24);
+	line-height: calc(29/24);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green;
+}
+
+.archive-list__item + .archive-list__item {
+	margin-top: rem(10);
+}
+
+.archive-list__toggle {
+	cursor: pointer;
+	display: inline-block;
+	color: #007b7b;
+}
+
+.archive-list__month {
+	display: none;
+	margin-left: rem(24);
+}
+
+.archive-list__month:first-child {
+	display: block;
+}
+
+.archive-list__item-month {
+	margin-top: rem(9);
+}

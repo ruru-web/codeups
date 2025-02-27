@@ -1,0 +1,21 @@
+@use 'global' as *;
+
+.blog-page-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(rem(333) 1fr));
+	gap: rem(40);
+	place-content: center;//1つの要素を中央揃え
+	place-items: center;//複数要素を中央揃え
+
+	@include mq("md") {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: rem(80);
+	}
+}
+
+// .blog-page-cards__item:nth-child(2n+3) {
+// 	@include mq("md") {
+// 		display: grid;
+// 		row-gap: rem(80);
+// 	}
+// }

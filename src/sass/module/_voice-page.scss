@@ -1,0 +1,43 @@
+@use 'global' as *;
+
+.voice-page {
+	position: relative;
+}
+
+.voice-page:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: rem(120);
+	height: rem(55);
+	top: -0.8%;
+	left: calc(50% - min(46vw, rem(620)));
+	// left: calc(50% - 43vw;
+	// left: calc(50% - rem(620));
+	background-image: url(../images/common/fish-green.svg);
+	// background-size: contain;
+	background-size: cover;
+	// 要素の領域に画像全体が収まるように拡大縮小される
+	transform: scaleX(-1);
+	//x軸に反転
+	@include mq("md") {
+		top: -4.5%;
+		left: calc(50% - min(48vw, rem(620)));
+		// left: calc(50% - 43vw);
+		// left: calc(50% - rem(620));
+		width: rem(301);
+		height: rem(138);
+	}
+}
+
+
+.voice-page__cards {
+	margin-top: rem(40);
+}
+
+.voice-page__pagination {
+	margin-top: rem(80);
+	@include mq("md") {
+		margin-top: rem(72);
+	}
+}

@@ -1,0 +1,68 @@
+@use 'global' as *;
+
+.gallery-list {
+	display: grid;
+	gap: rem(8);
+
+	@include mq("md") {
+		grid-template-columns: repeat(13, 1fr);
+		grid-auto-flow: dense;
+		// 隙間を詰めて効率的に配置
+	}
+}
+
+.gallery-list__item {
+	@include mq("md") {
+		grid-column: span 7; //列を7つ分使用
+		grid-row: span 1; //行を1つ分使用
+	}
+}
+// .gallery-list__wrap {
+// 	@include mq("md") {
+// 		grid-column: span 7; //列を7つ分使用
+// 		grid-row: span 1; //行を1つ分使用
+// 	}
+// }
+
+.gallery-list__item:nth-of-type(6n+1),
+.gallery-list__item:nth-of-type(6n+6) {
+	@include mq("md") {
+		grid-column: span 6; //列を6つ分使用
+		grid-row: span 2; //行を2つ分使用
+	}
+}
+
+// .gallery-list__wrap:nth-of-type(6n+1),
+// .gallery-list__wrap:nth-of-type(6n+6) {
+// 	@include mq("md") {
+// 		grid-column: span 6; //列を6つ分使用
+// 		grid-row: span 2; //行を2つ分使用
+// 	}
+// }
+
+// .gallery-list__item {
+// 	width: 100%;
+// }
+
+.gallery-list__item img {
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 580/369;
+	object-fit: cover;
+}
+
+.gallery-list__item:nth-of-type(6n+1) img,
+.gallery-list__item:nth-of-type(6n+6) img {
+	aspect-ratio: 492/746;
+}
+
+.gallery-list__modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: scroll;
+	z-index: 1000;
+}

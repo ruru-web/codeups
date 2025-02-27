@@ -1,0 +1,67 @@
+@use 'global' as *;
+
+.price-table {
+	width: 100%;
+	border-collapse: collapse; //一重線
+
+	@include mq("md") {
+		width: 71.4285%;
+	}
+}
+
+
+.price-table__course,
+.price-table__number {
+	border: rem(1) solid $green;
+	background-color: $white;
+}
+
+.price-table__course {
+	width: 69.5652%;
+
+	@include mq("md") {
+		width: 48.5712%;
+	}
+}
+
+.price-table__number {
+	width: 30.7246%;
+
+	@include mq("md") {
+		width: 22.8571%;
+	}
+}
+
+.price-table__course-text,
+.price-table__number-text {
+	min-height: rem(57);
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: $regular;
+
+	@include mq("md") {
+		min-height: rem(56);
+	}
+}
+
+.price-table__course-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include mq("md") {
+		margin-left: rem(13);
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+	}
+}
+
+.price-table__number-text {
+	margin-right: rem(14);
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}

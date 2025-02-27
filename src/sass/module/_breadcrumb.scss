@@ -1,0 +1,38 @@
+@use 'global' as *;
+
+.breadcrumb {
+	position: relative;
+	z-index: 1;
+	font-size: rem(14);
+	line-height: calc(20/14);
+	font-weight: $regular;
+	font-family: "Noto Sans JP", sans-serif;
+	color: $green2;
+	
+}
+
+.breadcrumb__arrow {
+	display: inline-block;
+	margin-left: rem(6);
+	margin-right: rem(4);
+	width: rem(4);
+	height: rem(8);
+}
+
+.breadcrumb-error {
+	margin-top: 0;
+	padding-top: rem(88);
+	color: $white;
+	background-color: $green;
+	
+	@include mq("md") {
+		padding-top: rem(98);
+	}
+}
+
+.breadcrumb__arrow-white {
+	mask-image: url(../images/common/breadcrumb-arrow.png);
+	mask-repeat: no-repeat;
+	mask-position: center center;
+	background-color: $white;
+}

@@ -1,0 +1,188 @@
+@use "global" as *;
+
+.information-tab {
+}
+
+.information-tab__menu {
+  display: flex;
+  gap: rem(20);
+  justify-content: center;
+
+  @include mq("md") {
+    // gap: rem(90);
+		justify-content: space-between;
+		align-items: center;
+  }
+}
+
+.information-tab__menu-item {
+  padding: rem(12) rem(10) rem(10);
+  // width: fit-content;
+  width: 100%;
+  font-size: rem(14);
+  // line-height: calc(17 / 14);
+  line-height: 1.4;
+  font-weight: $regular;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: $green3;
+  color: $green;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
+
+  @include mq("md") {
+    // position: relative;
+		max-width: rem(300);
+
+		display: flex;
+		justify-content: center;
+		// padding: 8px 16px;
+		gap: 8px;
+		padding: rem(14) rem(10) rem(13);
+
+
+
+    // padding: rem(32) rem(18) rem(29) rem(90);
+    font-size: rem(24);
+    line-height: calc(29 / 24);
+  }
+}
+
+.information-tab__menu-item.is-active {
+  color: $white;
+  background-color: $green;
+}
+
+.information-tab__menu-item::before {
+  @include mq("md") {
+    content: "";
+    // position: absolute;
+    // width: rem(63);
+    // height: rem(63);
+    // top: 16%;
+
+		// position: relative;
+		display: inline-block; // インライン要素として表示
+		width: rem(63);
+		height: rem(63);
+		background-size: contain;
+		background-repeat: no-repeat;
+		flex-shrink: 0; // サイズを固定
+	
+  }
+}
+
+.information-tab__menu-item:nth-of-type(1)::before {
+  @include mq("md") {
+
+    background-image: url(../images/common/icon-whale-right.svg);
+    // left: 10%;
+  }
+}
+
+.information-tab__menu-item:nth-of-type(2)::before {
+  @include mq("md") {
+    background-image: url(../images/common/info-tag-fish.svg);
+    // left: 6%;
+  }
+}
+
+.information-tab__menu-item:nth-of-type(3)::before {
+  @include mq("md") {
+    background-image: url(../images/common/icon-whale-left.svg);
+    // left: 10%;
+  }
+}
+
+.information-tab__menu-item.is-active::before {
+  @include mq("md") {
+    filter: brightness(0) invert(1); // 疑似要素の画像を白く変更
+  }
+}
+
+.information-tab__list {
+  margin-top: rem(16);
+
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.information-tab__list-item {
+  display: none;
+  padding: rem(23);
+  border: rem(1) solid $green;
+  background-color: $white;
+
+  // @include mq("md") {
+  // 	display: flex;
+  // 	align-items: center;
+  // 	gap: rem(48);
+  // }
+}
+
+.information-tab__list-item.is-active {
+  display: block;
+  animation: fade 0.3s;
+
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    gap: rem(48);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.information-tab__wrap {
+  @include mq("md") {
+    width: 50%;
+    // text-align: center;
+  }
+}
+
+.information-tab__title {
+  font-size: rem(24);
+  line-height: 1;
+  font-weight: $bold;
+  font-family: "Noto Sans JP", sans-serif;
+  border-bottom: rem(1) solid $green;
+  padding-bottom: rem(8);
+}
+
+.information-tab__text {
+  margin-top: rem(8);
+  width: 98%;
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  font-weight: $regular;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.information-tab__image {
+  margin-top: rem(8);
+  width: 100%;
+
+  @include mq("md") {
+    margin-top: 0;
+    width: 50%;
+  }
+}
+
+.information-tab__image img {
+  aspect-ratio: 297/189;
+  object-fit: cover;
+  width: 100%;
+
+  @include mq("md") {
+    aspect-ratio: 492/313;
+  }
+}

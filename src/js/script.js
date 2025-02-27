@@ -47,8 +47,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 		effect: "fade",
 		speed: 3000,
 		allowTouchMove: false,
-		autoplay: {
-			delay: 3000,
+		autoplay: { //自動再生
+			delay: 2000,
 		},
 	});
 
@@ -136,45 +136,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
 
-
-
-
-
   //画像のアニメーション
   //要素の取得とスピードの設定
   var box = $('.js-colorbox'), //クラスを取得
   speed = 700; // アニメーションの速度0.7s
-
-  //.colorboxの付いた全ての要素に対して下記の処理を行う
-  // box.each(function(){
-  // $(this).append('<div class="color js-color"></div>')
-  // // colorboxに<div class="color"></div>を追加
-  // var color = $(this).find('.js-color'),
-  // // 追加したcolor要素を取得
-  // image = $(this).find('img');
-  // // colorboxの中にある<img>タグを取得
-  // var counter = 0;
-  // // アニメーション実行回数を記録（最初は0）
-
-  //  // 初期状態をセット
-  // image.css('opacity','0'); // 画像を透明に設定
-  // color.css('width','0%');  // 背景色の幅を0%に設定
-
-  //   //スクロールで要素が見えたら実行（inview.jsを使用）
-  //   color.on('inview', function(){
-  //     if(counter == 0){
-  //     $(this).delay(200).animate({'width':'100%'},speed,function(){
-  //       //  少し遅らせてから実行,背景色を横に広げる
-  //           image.css('opacity','1');   // 画像を表示（透明を解除）
-            
-  //           $(this).css({'left':'0' , 'right':'auto'});   // 背景位置を変更
-  //           $(this).animate({'width':'0%'},speed);    // 背景色を消す
-  //       })
-  //         counter = 1;  // アニメーション実行済みとして記録
-  //       }
-  //   });
-  // });
-
 
   if (box.length === 0) {
     console.warn('No elements with .js-colorbox class found.');
@@ -210,30 +175,147 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
 
-    //アニメーション
-  $(document).ready(function () {
-    const leftSlides = $(".mv-loading__split-left .slide");
-    // const leftSlides = $(".mv-loading__split-left");
-    const rightSlides = $(".mv-loading__split-right .slide");
-    // const rightSlides = $(".mv-loading__split-right");
-    const totalSlides = leftSlides.length;
-    let currentIndex = 0;
+  //   //アニメーション
+  // $(document).ready(function () {
+  //   const leftSlides = $(".mv-loading__split-left .slide-left");
+  //   const rightSlides = $(".mv-loading__split-right .slide-right");
+  //   const totalSlides = leftSlides.length;
+  //   let currentIndex = 0;
 
-    // 最初のスライドを表示
-    $(leftSlides[currentIndex]).addClass("active");
-    $(rightSlides[currentIndex]).addClass("active");
+  //   // 最初のスライドを表示
+  //   $(leftSlides[currentIndex]).addClass("active");
+  //   $(rightSlides[currentIndex]).addClass("active");
+  // });
+
+  // // loading scroll lock
+  // if (window.location.pathname === '/index.html') {
+  //   $(document).ready(function () {
+  //     // bodyとhtmlのスクロール制御
+  //     $("html, body").css({ height: "100%", overflow: "hidden" });
+
+  //     // ローディングアニメーションの完了後にスクロール解除
+  //     setTimeout(function () {
+  //       $("html, body").css({ height: "", overflow: "" });
+  //     }, 3000); // 適切なタイミングに合わせて調整
+  //   });
+  // }
+
+  $(document).ready(function () {
+    // アニメーションを手動でトリガー
+    $(".mv-loading__split-left .slide-left").addClass("active");
+    setTimeout(() => {
+      $(".mv-loading__split-right .slide-right").addClass("active");
+    }, 500); // 0.5秒後に右側をトリガー
+  
+    // ローディングスクロールロックの解除タイミング
+    setTimeout(function () {
+      $("html, body").css({ height: "", overflow: "" });
+      $(".mv-loading").fadeOut(500); // 背景の白をフェードアウト
+    }, 3000); // 3秒後に全体を解除
+  });
+  
+
+
+});
+
+
+// キャンペーンページタグ
+// readyはページが完全に読み込まれた後に中のコードを実行する仕組み
+$(document).ready(function () {
+$('.js-tab-menu').on('click', function () {
+  // すべてのタグから'is-active'クラスを削除
+  $('.js-tab-menu').removeClass('is-active');
+  // クリックされたタグに'is-active'クラスを追加
+  $(this).addClass('is-active');
   });
 
-  // loading scroll lock
-  if (window.location.pathname === '/index.html') {
-    $(document).ready(function () {
-      // bodyとhtmlのスクロール制御
-      $("html, body").css({ height: "100%", overflow: "hidden" });
+});
 
-      // ローディングアニメーションの完了後にスクロール解除
-      setTimeout(function () {
-        $("html, body").css({ height: "", overflow: "" });
-      }, 3000); // 適切なタイミングに合わせて調整
+
+//aboutページ モーダル
+jQuery(function ($) {
+    // モーダルを開く処理
+    $(".js-modal-open").on("click", function (e) {
+      e.preventDefault(); // リンクのデフォルト動作を無効化
+      const src = $(this).find("img").attr("src"); // クリックされた画像のパスを取得
+      const modal = $(".js-modal"); // モーダルの要素を取得
+  
+      modal.html(`<img src="${src}" alt="" class="modal__image">`); // モーダルに画像を挿入
+      modal.fadeIn(); // モーダルを表示
     });
-  }
+  
+    // モーダルを閉じる処理
+    $(".js-modal").on("click", function () {
+      $(this).fadeOut(); // モーダルを非表示
+    });
+});
+
+// informationページタグ
+// readyはページが完全に読み込まれた後に中のコードを実行する仕組み
+$(document).ready(function () {
+  $('.js-tab-button').on('click', function () {
+    // すべてのタグから'is-active'クラスを削除
+    $('.js-tab-button').removeClass('is-active');
+    // クリックされたタグに'is-active'クラスを追加
+    $(this).addClass('is-active');
+    // すべてのタブコンテンツから'is-active'クラスを削除
+    $('.js-tab-content').removeClass('is-active');
+
+     // クリックされたボタンに対応するタブコンテンツを表示
+    var number = $(this).data("number");
+    $('#' + number).addClass('is-active');
+  });
+  });
+
+  // blogページsidebar記事
+  $(document).ready(function () {
+    // トグルボタンをクリックした際の処理
+    $('.archive-list__toggle').on('click', function () {
+      const $button = $(this); // 現在クリックしたボタン
+      const $submenu = $button.nextAll('ul').first(); // ボタンの次の<ul>を取得
+
+      if ($submenu.length > 0) {
+        // サブメニューがある場合のみ処理
+        if ($submenu.is(':visible')) {
+          // サブメニューが表示中の場合、非表示にする
+          $submenu.slideUp(300); // 300msで非表示
+          $button.text('▶'); // アイコンを切り替え
+        } else {
+          // サブメニューが非表示の場合、表示する
+          $submenu.slideDown(300); // 300msで表示
+          $button.text('▼'); // アイコンを切り替え
+        }
+      }
+    });
+     // 初期状態設定: 2023年のトグルを開いた状態にする
+    const $initialToggle = $('.archive-list__item').first(); // 最初の<li>要素 (2023)
+    $initialToggle.find('.archive-list__month').show(); // サブメニューを表示
+    $initialToggle.find('.archive-list__toggle').first().text('▼'); // トグルボタンを「▼」に変更
+
+
+  });
+
+  // Voice
+  document.addEventListener("DOMContentLoaded", function () {
+    const paginationItems = document.querySelectorAll(".pagination__list");
+  
+    paginationItems.forEach(item => {
+      item.addEventListener("click", function (event) {
+        event.preventDefault(); // ページ遷移を防ぐ
+  
+        // すべてのページから `pagination__list--green` を削除
+        paginationItems.forEach(el => el.classList.remove("pagination__list--green"));
+  
+        // クリックされたページに `pagination__list--green` を追加
+        this.classList.add("pagination__list--green");
+      });
+    });
+  });
+
+  // FAQアコーディオンページ
+  jQuery(function ($) {
+    $('.js-faq-question').on('click', function () {
+        $(this).next().slideToggle();
+        $(this).toggleClass('is-open');
+    });
 });
