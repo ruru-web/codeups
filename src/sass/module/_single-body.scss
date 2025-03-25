@@ -94,18 +94,14 @@
 
 .single-body-content img {
 	margin-top: rem(24);
+	aspect-ratio: 700/468;
+	object-fit: cover;
 	width: 100%;
 
 	@include mq("md") {
 		margin-top: rem(40);
 	}
 }
-
-// .single-bod-content image img {
-// 	aspect-ratio: 700/468;
-// 	object-fit: cover;
-// 	width: 100%;
-// }
 
 .single-body-content ul {
 	margin-top: rem(24);
@@ -120,25 +116,28 @@
 	}
 }
 
+.single-body-content li {
+	position: relative;
+	padding-left: rem(27);
+}
+
 .single-body-content li + li {
 	margin-top: rem(4);
 }
 
 .single-body-content li:before {
+	position: absolute;
+	top: rem(3);
+	left: rem(0);
+	content: "";
 	background-image: url(../images/common/icon-starfish-green.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
-	content: "";
 	display: inline-block;
-	margin-right: rem(10);
 	// flex-shrink: 0;
 	height: rem(18);
 	width: rem(18);
 }
-
-// .blog-page-detail__list-item span {
-// 	margin-left: rem(10);
-// }
 
 .single-body__pagination {
 	margin-top: rem(40);
