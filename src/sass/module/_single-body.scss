@@ -1,10 +1,10 @@
 @use 'global' as *;
 
-.blog-page-detail {
+.single-body {
 	position: relative;
 }
 
-.blog-page-detail::before {
+.single-body::before {
 	content: "";
 	position: absolute;
 	width: rem(120);
@@ -26,28 +26,28 @@
 	}
 }
 
-.blog-page-detail__inner {
+.single-body__inner {
 	@include mq("md") {
 		display: flex;
 		gap: rem(86);
 	}
 }
 
-.blog-page-detail__main {
+.single-body__main {
 	@include mq("md") {
 		// width: 65.3703%;
 		width: 64.99535%;
 	}
 }
 
-.blog-page-detail-date {
+.single-body__date {
 	font-size: rem(14);
 	line-height: calc(18/14);
 	font-weight: $regular;
 	color: $green2;
 }
 
-.blog-page-detail__title {
+.single-body__title {
 	margin-top: rem(8);
 	font-size: rem(24);
 	line-height: calc(29/24);
@@ -64,7 +64,7 @@
 	}
 }
 
-.blog-page-detail__image {
+.single-body__image {
 	margin-top: rem(24);
 	width: 100%;
 
@@ -73,13 +73,13 @@
 	}
 }
 
-.blog-page-detail__image img {
+.single-body__image img {
 	aspect-ratio: 700/468;
 	object-fit: cover;
 	width: 100%;
 }
 
-.blog-page-detail__text {
+.single-body-content p {
 	margin-top: rem(24);
 	font-size: rem(16);
 	line-height: calc(24/16);
@@ -92,7 +92,22 @@
 	}
 }
 
-.blog-page-detail__list {
+.single-body-content img {
+	margin-top: rem(24);
+	width: 100%;
+
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+// .single-bod-content image img {
+// 	aspect-ratio: 700/468;
+// 	object-fit: cover;
+// 	width: 100%;
+// }
+
+.single-body-content ul {
 	margin-top: rem(24);
 	font-size: rem(16);
 	line-height: calc(24/16);
@@ -105,26 +120,27 @@
 	}
 }
 
-.blog-page-detail__list-item + .blog-page-detail__list-item {
+.single-body-content li + li {
 	margin-top: rem(4);
 }
 
-.blog-page-detail__list-item::before {
+.single-body-content li:before {
 	background-image: url(../images/common/icon-starfish-green.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
 	display: inline-block;
-	flex-shrink: 0;
-	height: 18px;
-	width: 18px;
+	margin-right: rem(10);
+	// flex-shrink: 0;
+	height: rem(18);
+	width: rem(18);
 }
 
-.blog-page-detail__list-item span {
-	margin-left: rem(10);
-}
+// .blog-page-detail__list-item span {
+// 	margin-left: rem(10);
+// }
 
-.blog-page-detail__pagination {
+.single-body__pagination {
 	margin-top: rem(40);
 
 	@include mq("md") {
@@ -132,7 +148,7 @@
 	}
 }
 
-.blog-page-detail__side {
+.single-body__side {
 	margin-top: rem(80);
 	padding-right: rem(25);
 	padding-left: rem(25);

@@ -40,15 +40,24 @@
 		// padding: 8px 16px;
 		gap: 8px;
 		padding: rem(14) rem(10) rem(13);
-
-
-
     // padding: rem(32) rem(18) rem(29) rem(90);
     font-size: rem(24);
     line-height: calc(29 / 24);
   }
 }
 
+//hover指定
+.information-tab__menu-item:hover {
+  background-color: $green;
+	color: $white;
+}
+
+.information-tab__menu-item:hover::before {
+  content: "";
+  filter: brightness(0) invert(1);
+}
+
+//is-active指定
 .information-tab__menu-item.is-active {
   color: $white;
   background-color: $green;
@@ -114,7 +123,7 @@
   padding: rem(23);
   border: rem(1) solid $green;
   background-color: $white;
-
+  scroll-margin-top: 30vh;
   // @include mq("md") {
   // 	display: flex;
   // 	align-items: center;

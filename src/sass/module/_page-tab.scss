@@ -18,7 +18,7 @@
 
 .page-tab__menu-item {
 	height: rem(34);
-	padding: rem(6);
+	// padding: rem(6);
 
 	font-size: rem(14);
 	line-height: calc(22/14);
@@ -29,6 +29,7 @@
 	background-color: $white;
 	text-align: center;
 	cursor: pointer;
+	place-content: center;
 
 	@include mq("md") {
 		width: rem(162);
@@ -38,4 +39,14 @@
 .page-tab__menu-item.is-active {
 	color: $white;
 	background-color: $green;
+}
+
+.page-tab__menu-item:hover {
+	background-color: $green;
+	color: $white;
+}
+
+.page-tab__menu-item a {
+	display: block;
+	padding: rem(6);
 }

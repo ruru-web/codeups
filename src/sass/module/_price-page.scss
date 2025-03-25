@@ -5,6 +5,21 @@
 	position: relative;
 }
 
+.price-page__inner {
+	width: 100%;
+	max-width: 600px;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	margin-right: auto;
+	margin-left: auto;
+
+	@include mq("md") {
+		max-width: 750px;
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
+}
+
 .price-page:before {
 	content: "";
 	position: absolute;
@@ -29,6 +44,10 @@
 		width: rem(301);
 		height: rem(138);
 	}
+}
+
+.price-page__lists-item {
+	scroll-margin-top: 15vh;/* 画面の15％スクロールを調整 */
 }
 
 .price-page__lists-item + .price-page__lists-item {

@@ -35,7 +35,7 @@
 	font-weight: $bold;
 }
 
-.drawer__item-list::before {
+.drawer__item-link--list::before {
 	content: url(../images/common/icon-starfish.svg);
 	display: inline-block;
 	width: rem(18);

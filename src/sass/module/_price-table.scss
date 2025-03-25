@@ -46,16 +46,15 @@
 }
 
 .price-table__course-text {
+	padding: rem(5) rem(13);
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 
 	@include mq("md") {
-		margin-left: rem(13);
-		display: flex;
-		flex-direction: row;
 		justify-content: start;
+		text-align: left;
 	}
 }
 

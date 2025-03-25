@@ -2,10 +2,8 @@
 
 .price-page-list {
 	@include mq("md") {
-		margin: 0 auto;
-		max-width: rem(700);
 		display: flex;
-		flex-direction: row;
+		// flex-direction: row;
 	}
 }
 

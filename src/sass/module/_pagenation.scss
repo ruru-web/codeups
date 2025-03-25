@@ -7,6 +7,10 @@
  color: $green;
 }
 
+.pagination-single {
+	gap: rem(80);
+}
+
 .pagination__lists {
 	display: flex;
 	gap: rem(12);

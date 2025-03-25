@@ -4,12 +4,19 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(rem(333), 1fr));
 	gap: rem(40);
-	place-content: center;
-	place-items: center;
-
+	place-content: center;//1つの要素を中央揃え
+	place-items: center;//複数要素を中央揃え
 
 	@include mq("md") {
 		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.blog-cards-2cl {
+
+	@include mq("md") {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: rem(80);
 	}
 }
 

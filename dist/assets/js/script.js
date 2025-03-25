@@ -233,14 +233,15 @@ jQuery(function ($) {
 
 // キャンペーンページタグ
 // readyはページが完全に読み込まれた後に中のコードを実行する仕組み
-$(document).ready(function () {
-  $('.js-tab-menu').on('click', function () {
-    // すべてのタグから'is-active'クラスを削除
-    $('.js-tab-menu').removeClass('is-active');
-    // クリックされたタグに'is-active'クラスを追加
-    $(this).addClass('is-active');
-  });
-});
+// $(document).ready(function () {
+// $('.js-tab-menu').on('click', function () {
+//   // すべてのタグから'is-active'クラスを削除
+//   $('.js-tab-menu').removeClass('is-active');
+//   // クリックされたタグに'is-active'クラスを追加
+//   $(this).addClass('is-active');
+//   });
+
+// });
 
 //aboutページ モーダル
 jQuery(function ($) {
@@ -252,11 +253,13 @@ jQuery(function ($) {
 
     modal.html("<img src=\"".concat(src, "\" alt=\"\" class=\"modal__image\">")); // モーダルに画像を挿入
     modal.fadeIn(); // モーダルを表示
+    $("body").css("overflow", "hidden"); // 背景のスクロールを無効化
   });
 
   // モーダルを閉じる処理
   $(".js-modal").on("click", function () {
     $(this).fadeOut(); // モーダルを非表示
+    $("body").css("overflow", "auto"); // 背景のスクロールを有効化
   });
 });
 
@@ -275,6 +278,50 @@ $(document).ready(function () {
     var number = $(this).data("number");
     $('#' + number).addClass('is-active');
   });
+});
+
+//リンクを押すと、該当のtabが開いたページに飛ぶ
+document.addEventListener("DOMContentLoaded", function () {
+  // 現在のURLのパラメーターを取得
+  var params = new URLSearchParams(window.location.search);
+  var section = params.get("section"); // 例: "tab02"
+
+  // section の値がある場合、該当タブをアクティブにする
+  if (section) {
+    var targetTab = document.getElementById(section);
+    if (targetTab) {
+      // 全タブの `is-active` を削除
+      document.querySelectorAll(".js-tab-content").forEach(function (tab) {
+        tab.classList.remove("is-active");
+      });
+      document.querySelectorAll(".js-tab-button").forEach(function (button) {
+        button.classList.remove("is-active");
+      });
+
+      // 該当タブをアクティブにする
+      targetTab.classList.add("is-active");
+
+      // 対応するタブボタンもアクティブにする
+      var activeButton = document.querySelector(".js-tab-button[data-number=\"".concat(section, "\"]"));
+      if (activeButton) {
+        activeButton.classList.add("is-active");
+      }
+
+      // **スクロール位置を調整**
+      setTimeout(function () {
+        var headerHeight = document.querySelector(".header").offsetHeight; // ヘッダーの高さを取得
+        var tabMenuHeight = document.querySelector(".information-tab__menu").offsetHeight; // タブメニューの高さを取得
+        var offset = headerHeight + tabMenuHeight + 50; // 余白を考慮（50px）
+
+        window.scrollTo({
+          top: targetTab.getBoundingClientRect().top + window.scrollY - offset,
+          behavior: "smooth"
+          // behavior: "auto" // 一瞬でスクロール
+        });
+      }, 100); // 100ms 待ってからスクロール
+      // }, 0);
+    }
+  }
 });
 
 // blogページsidebar記事

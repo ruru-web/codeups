@@ -9,6 +9,13 @@
 	}
 }
 
+.voice-cards-2cl {
+	@include mq("md") {
+		column-gap: rem(40);
+		row-gap: rem(80);
+	}
+}
+
 // .voice-cards__item {
 // 	margin: 0 auto;
 // 	max-width: rem(345);
