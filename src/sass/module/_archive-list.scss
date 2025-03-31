@@ -9,19 +9,29 @@
 	color: $green;
 }
 
+.archive-list__item {
+	cursor: pointer;
+}
+
 .archive-list__item + .archive-list__item {
 	margin-top: rem(10);
 }
 
 .archive-list__toggle {
-	cursor: pointer;
+	// cursor: pointer;
 	display: inline-block;
 	color: #007b7b;
+}
+
+.archive-list__year::hover {
+	opacity: 0.7;
+	transition: 0.3s;
 }
 
 .archive-list__month {
 	display: none;
 	margin-left: rem(24);
+	cursor: pointer;
 }
 
 .archive-list__month:first-child {

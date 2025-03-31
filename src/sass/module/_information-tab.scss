@@ -30,6 +30,7 @@
   align-items: center;
   cursor: pointer;
   box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
 
   @include mq("md") {
     // position: relative;
@@ -78,7 +79,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		flex-shrink: 0; // サイズを固定
-	
+    transition: 0.3s;
   }
 }
 

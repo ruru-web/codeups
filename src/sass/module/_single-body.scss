@@ -79,7 +79,7 @@
 	width: 100%;
 }
 
-.single-body-content p {
+.single-body__content p {
 	margin-top: rem(24);
 	font-size: rem(16);
 	line-height: calc(24/16);
@@ -92,7 +92,7 @@
 	}
 }
 
-.single-body-content img {
+.single-body__content img {
 	margin-top: rem(24);
 	aspect-ratio: 700/468;
 	object-fit: cover;
@@ -103,7 +103,7 @@
 	}
 }
 
-.single-body-content ul {
+.single-body__content ul {
 	margin-top: rem(24);
 	font-size: rem(16);
 	line-height: calc(24/16);
@@ -116,16 +116,16 @@
 	}
 }
 
-.single-body-content li {
+.single-body__content li {
 	position: relative;
 	padding-left: rem(27);
 }
 
-.single-body-content li + li {
+.single-body__content li + li {
 	margin-top: rem(4);
 }
 
-.single-body-content li:before {
+.single-body__content li::before {
 	position: absolute;
 	top: rem(3);
 	left: rem(0);

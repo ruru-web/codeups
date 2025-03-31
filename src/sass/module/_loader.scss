@@ -1,5 +1,72 @@
 @use 'global' as *;
 
+.loading {
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// .top-mv__title-wrap--green {
+// 	color: $green;
+// }
+.loading-title {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  color: $green;
+	opacity: 0; /* 初期状態で透明に */
+  transform: translateY(100%); /* 下に隠す */
+
+	@include mq("md") {
+		top: 50%;
+  	left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+
+
+//mv全体を覆う
+.main-view {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+//左右に分割されたエリア
+.left-side, .right-side {
+	width: 50%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+
+}
+
+.loading-img {
+  transform: translateY(100%); /* 下に隠す */
+}
+
+.left-side {
+	background-color: skyblue;
+}
+.right-side {
+	background-color: yellowgreen;
+}
+
 // .loader {
 	// position: fixed;
 	// top: 0;

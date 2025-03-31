@@ -355,17 +355,26 @@ html {
 	margin-left: 0.125rem;
 }
 
+.archive-list__item {
+	cursor: pointer;
+}
+
 .archive-list__item + .archive-list__item {
 	margin-top: 0.625rem;
 }
 
 .archive-list__toggle {
 	color: #007b7b;
-	cursor: pointer;
 	display: inline-block;
 }
 
+.archive-list__year::hover {
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
 .archive-list__month {
+	cursor: pointer;
 	display: none;
 	margin-left: 1.5rem;
 }
@@ -1216,7 +1225,7 @@ html {
 	margin-top: 2.5rem;
 }
 
-.faq-list__question {
+.faq-item__question {
 	background-color: #408F95;
 	color: #fff;
 	font-family: "Noto Sans JP", sans-serif;
@@ -1227,8 +1236,8 @@ html {
 	position: relative;
 }
 
-.faq-list__question::before,
-.faq-list__question::after {
+.faq-item__question::before,
+.faq-item__question::after {
 	background-color: #fff;
 	content: "";
 	height: 0.0625rem;
@@ -1239,21 +1248,25 @@ html {
 	width: 1.75rem;
 }
 
-.faq-list__question::after {
+.faq-item__question::after {
 	transform: rotate(0deg);
 }
 
-.faq-list__question.is-open::after {
+.faq-item__question.is-open::after {
 	transform: rotate(90deg);
 }
 
-.faq-list__answer {
+.faq-item__answer {
 	border: 0.0625rem solid #408F95;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.435;
 	padding: 1.5rem 1rem;
+}
+
+.faq-lists__item + .faq-lists__item {
+	margin-top: 2.5rem;
 }
 
 .faq-page {
@@ -1280,10 +1293,6 @@ html {
 	transform: scaleX(-1);
 	width: 7.5rem;
 	z-index: -1;
-}
-
-.faq-page__lists-item + .faq-page__lists-item {
-	margin-top: 2.5rem;
 }
 
 .footer {
@@ -1757,6 +1766,7 @@ html {
 	line-height: 1.4;
 	padding: 0.75rem 0.625rem 0.625rem;
 	text-align: center;
+	transition: 0.3s;
 	width: 100%;
 }
 
@@ -1831,6 +1841,94 @@ html {
 	width: 100%;
 }
 
+.loading {
+	align-items: center;
+	background-color: #fff;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+}
+
+.loading-title {
+	color: #408F95;
+	left: 50%;
+	opacity: 0; /* 初期状態で透明に */
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transform: translateY(100%); /* 下に隠す */
+	z-index: 10;
+}
+
+.main-view {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.left-side,
+.right-side {
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 50%;
+}
+
+.loading-img {
+	transform: translateY(100%); /* 下に隠す */
+}
+
+.left-side {
+	background-color: skyblue;
+}
+
+.right-side {
+	background-color: yellowgreen;
+}
+
+.menu-item__title {
+	align-items: center;
+	background-color: #408F95;
+	color: #fff;
+	display: flex;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	justify-content: center;
+	line-height: 1.5;
+	min-height: 2.1875rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+.menu-item__title::before {
+	background-image: url(../images/common/icon-whale-right.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	filter: brightness(0) invert(1);
+	height: 1.5rem;
+	margin-right: 0.5rem;
+	width: 1.5rem;
+}
+
+.menu-list__item {
+	scroll-margin-top: 15vh; /* 画面の15％スクロールを調整 */
+}
+
+.menu-list__item + .menu-list__item {
+	margin-top: 2.5rem;
+}
+
 .modal {
 	align-items: center;
 	background-color: rgba(32, 32, 32, 0.8);
@@ -1876,6 +1974,11 @@ html {
 	line-height: 1.5714285714;
 	place-content: center;
 	text-align: center;
+	transition: 0.3s;
+}
+
+.page-tab__menu-item a {
+	opacity: 1;
 }
 
 .page-tab__menu-item.is-active {
@@ -2109,32 +2212,6 @@ html {
 	margin-left: 0.5rem;
 }
 
-.price-page-list__title {
-	align-items: center;
-	background-color: #408F95;
-	color: #fff;
-	display: flex;
-	font-family: "Noto Sans JP", sans-serif;
-	font-size: 1rem;
-	font-weight: 700;
-	justify-content: center;
-	line-height: 1.5;
-	min-height: 2.1875rem;
-	padding-bottom: 0.5rem;
-	padding-top: 0.5rem;
-}
-
-.price-page-list__title::before {
-	background-image: url(../images/common/icon-whale-right.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	content: "";
-	filter: brightness(0) invert(1);
-	height: 1.5rem;
-	margin-right: 0.5rem;
-	width: 1.5rem;
-}
-
 .price-page {
 	position: relative;
 }
@@ -2159,14 +2236,6 @@ html {
 	transform: scaleX(-1);
 	width: 7.5rem;
 	z-index: -1;
-}
-
-.price-page__lists-item {
-	scroll-margin-top: 15vh; /* 画面の15％スクロールを調整 */
-}
-
-.price-page__lists-item + .price-page__lists-item {
-	margin-top: 2.5rem;
 }
 
 .price-table {
@@ -2487,7 +2556,7 @@ html {
 	width: 100%;
 }
 
-.single-body-content p {
+.single-body__content p {
 	color: #000;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
@@ -2496,7 +2565,7 @@ html {
 	margin-top: 1.5rem;
 }
 
-.single-body-content img {
+.single-body__content img {
 	-o-object-fit: cover;
 	aspect-ratio: 700/468;
 	margin-top: 1.5rem;
@@ -2504,7 +2573,7 @@ html {
 	width: 100%;
 }
 
-.single-body-content ul {
+.single-body__content ul {
 	color: #000;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
@@ -2513,16 +2582,16 @@ html {
 	margin-top: 1.5rem;
 }
 
-.single-body-content li {
+.single-body__content li {
 	padding-left: 1.6875rem;
 	position: relative;
 }
 
-.single-body-content li + li {
+.single-body__content li + li {
 	margin-top: 0.25rem;
 }
 
-.single-body-content li:before {
+.single-body__content li::before {
 	background-image: url(../images/common/icon-starfish-green.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -2917,7 +2986,7 @@ html {
 
 .top-mv__title-wrap {
 	animation: fadeInOut 3s forwards;
-	color: #408F95;
+	color: #fff;
 	left: 50%;
 	position: absolute;
 	text-align: center;
@@ -2940,66 +3009,6 @@ html {
 	font-size: 1.25rem;
 	font-weight: 400;
 	line-height: 1.65;
-}
-
-.mv-loading {
-	animation: out 3s forwards;
-	height: 100vh;
-	overflow: hidden;
-	position: fixed;
-	width: 100%;
-	z-index: 9;
-}
-
-.mv-loading__container {
-	animation: imageFade 3s forwards;
-	background-color: transparent;
-	display: flex;
-	height: 100vh;
-	margin: 0;
-	opacity: 0;
-	overflow: hidden;
-	padding: 0;
-	position: relative;
-	width: 100%; /* 新しいアニメーション */
-}
-
-.mv-loading__split-left,
-.mv-loading__split-right {
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-	width: 50%;
-}
-
-.mv-loading__split-left img {
-	bottom: 0;
-	height: 100%;
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	transform: translateY(100%);
-	width: 100%;
-}
-
-.mv-loading__split-right img {
-	bottom: 0;
-	height: 100%;
-	opacity: 0;
-	position: absolute;
-	right: 0;
-	transform: translateY(100%);
-	width: 100%;
-}
-
-.mv-loading__split-left img {
-	animation: slideIn 0.8s ease-in-out forwards;
-	animation-delay: 0.5s;
-}
-
-.mv-loading__split-right img {
-	animation: slideIn 0.8s ease-in-out forwards;
-	animation-delay: 1s;
 }
 
 .top-mv__slider {
@@ -3687,24 +3696,24 @@ html {
 	margin-top: 4.875rem;
 }
 
-.faq-list {
+.faq-item {
 	font-size: 1.25rem;
 	line-height: 1.2;
 }
 
-.faq-list__question {
+.faq-item__question {
 	font-size: 1.25rem;
 	line-height: 1.2;
 	padding: 1.8125rem 2.5rem 1.6875rem;
 }
 
-.faq-list__question::before,
-.faq-list__question::after {
+.faq-item__question::before,
+.faq-item__question::after {
 	right: 2.5rem;
 	width: 2rem;
 }
 
-.faq-list__answer {
+.faq-item__answer {
 	margin-top: 1rem;
 	padding: 2.4375rem;
 }
@@ -3873,6 +3882,7 @@ html {
 	display: inline-block;
 	flex-shrink: 0;
 	height: 3.9375rem;
+	transition: 0.3s;
 	width: 3.9375rem;
 }
 
@@ -3921,6 +3931,32 @@ html {
 	padding-right: 25px;
 }
 
+.loading-title {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.menu-item {
+	display: flex;
+}
+
+.menu-item__title {
+	flex-flow: column-reverse;
+	width: 28.5714%;
+}
+
+.menu-item__title::before {
+	height: 4rem;
+	margin-right: 0;
+	margin-top: 0.4375rem;
+	width: 4rem;
+}
+
+.menu-list__item + .menu-list__item {
+	margin-top: 5rem;
+}
+
 .page-tab__menu {
 	gap: 2rem;
 	grid-auto-flow: column;
@@ -3963,22 +3999,6 @@ html {
 	line-height: 1.5;
 }
 
-.price-page-list {
-	display: flex;
-}
-
-.price-page-list__title {
-	flex-flow: column-reverse;
-	width: 28.5714%;
-}
-
-.price-page-list__title::before {
-	height: 4rem;
-	margin-right: 0;
-	margin-top: 0.4375rem;
-	width: 4rem;
-}
-
 .price-page__inner {
 	max-width: 750px;
 	padding-left: 25px;
@@ -3990,10 +4010,6 @@ html {
 	left: calc(50% - min(48vw, 38.75rem));
 	top: -7%;
 	width: 18.8125rem;
-}
-
-.price-page__lists-item + .price-page__lists-item {
-	margin-top: 5rem;
 }
 
 .price-table {
@@ -4065,15 +4081,15 @@ html {
 	margin-top: 2.5rem;
 }
 
-.single-body-content p {
+.single-body__content p {
 	margin-top: 2.5rem;
 }
 
-.single-body-content img {
+.single-body__content img {
 	margin-top: 2.5rem;
 }
 
-.single-body-content ul {
+.single-body__content ul {
 	margin-top: 2.5rem;
 }
 
@@ -4482,70 +4498,6 @@ from {
 
 to {
 	opacity: 1;
-}
-
-}
-
-@keyframes fadeInOut {
-
-0%,20% {
-	opacity: 0;
-}
-
-20%,60% {
-	opacity: 1;
-}
-
-60%,80% {
-	opacity: 0;
-}
-
-80%,100% { /* テキストを表示したままにする */
-	color: #ffffff;
-	opacity: 1;
-}
-
-}
-
-@keyframes out {
-
-0%,80% {
-	background-color: #fff;
-	opacity: 1;
-	visibility: visible;
-}
-
-90%,100% {
-	background-color: transparent;
-	display: none;
-	opacity: 0;
-	visibility: hidden;
-}
-
-}
-
-@keyframes imageFade {
-
-0%,30% {
-	opacity: 0;
-}
-
-40%,100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes slideIn {
-
-0% {
-	opacity: 0;
-	transform: translateY(100%);
-}
-
-100% {
-	opacity: 1;
-	transform: translateY(0);
 }
 
 }

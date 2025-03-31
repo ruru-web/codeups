@@ -1,6 +1,6 @@
 @use 'global' as *;
 
-.price-page-list {
+.menu-item {
 	@include mq("md") {
 		display: flex;
 		// flex-direction: row;
@@ -8,7 +8,7 @@
 }
 
 
-.price-page-list__title {
+.menu-item__title {
 	padding-top: rem(8);
 	padding-bottom: rem(8);
 	background-color: $green;
@@ -28,7 +28,7 @@
 	}
 }
 
-.price-page-list__title::before {
+.menu-item__title::before {
 	margin-right: rem(8);
 	content: "";
 	width: rem(24);

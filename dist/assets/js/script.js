@@ -213,22 +213,140 @@ jQuery(function ($) {
   //   });
   // }
 
-  $(document).ready(function () {
-    // アニメーションを手動でトリガー
-    $(".mv-loading__split-left .slide-left").addClass("active");
-    setTimeout(function () {
-      $(".mv-loading__split-right .slide-right").addClass("active");
-    }, 500); // 0.5秒後に右側をトリガー
+  //↓ここから下は通常に使える！
+  // $(document).ready(function () {
+  //   // アニメーションを手動でトリガー
+  //   $(".mv-loading__split-left .slide-left").addClass("active");
+  //   setTimeout(() => {
+  //     $(".mv-loading__split-right .slide-right").addClass("active");
+  //   }, 500); // 0.5秒後に右側をトリガー
 
-    // ローディングスクロールロックの解除タイミング
-    setTimeout(function () {
-      $("html, body").css({
-        height: "",
-        overflow: ""
-      });
-      $(".mv-loading").fadeOut(500); // 背景の白をフェードアウト
-    }, 3000); // 3秒後に全体を解除
+  //   // ローディングスクロールロックの解除タイミング
+  //   setTimeout(function () {
+  //     $("html, body").css({ height: "", overflow: "" });
+  //     $(".mv-loading").fadeOut(500); // 背景の白をフェードアウト
+  //   }, 3000); // 3秒後に全体を解除
+  // });
+
+  //アニメーション練習①
+  // document.addEventListener("DOMContentLoaded", function () {
+  // 背景画像を設定（1枚の画像を左右分割する形）
+  // document.querySelector(".left-side").style.backgroundImage = "url('path/to/image.jpg')";
+  // document.querySelector(".right-side").style.backgroundImage = "url('path/to/image.jpg')";
+  // document.querySelector(".left-side").style.backgroundPosition = "left center";
+  // document.querySelector(".right-side").style.backgroundPosition = "right center";
+
+  // GSAPアニメーション
+  var tl = gsap.timeline();
+
+  // ①緑の文字が消える
+  tl.fromTo('.loading-title', {
+    opacity: 0,
+    y: 0
+  }, {
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out"
   });
+  tl.fromTo('.loading-title', {
+    opacity: 1
+  }, {
+    opacity: 0,
+    duration: 0.5
+  });
+
+  // 左画面が下から登場
+  tl.fromTo('.loading-img', {
+    y: "100%"
+  }, {
+    y: "0%",
+    duration: 0.5,
+    stagger: 0.2,
+    ease: "power4.out"
+  });
+  tl.fromTo('.loading-title', {
+    opacity: 0,
+    y: 100
+  }, {
+    opacity: 1,
+    y: 0,
+    color: '#fff',
+    duration: 1
+  });
+  tl.fromTo('.loading', {
+    opacity: 1
+  }, {
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
+    onComplete: function onComplete() {
+      document.querySelector(".loading").remove();
+    }
+  });
+
+  // gsap.fromTo('.left-side',
+  //   { y: "100%"},
+  //   { y: "0%", duration: 1.2, 
+  //     ease: "power4.out"
+  //   });
+
+  //   gsap.fromTo('.right-side',
+  //     { y: "100%"},
+  //     { y: "0%", duration: 1.2, 
+  //       ease: "power4.out"
+  //     });
+
+  // tl.to(".loading-title", { 
+  //   opacity: 0, 
+  //   duration: 0.8,
+  //   ease: "power2.out"
+  // })
+
+  // ②ローディング画面を白くしたままフェードアウト
+  // .to(".loading", { 
+  //   opacity: 0, 
+  //   duration: 0.8,
+  //   onComplete: () => {
+  //     document.querySelector(".loading").style.display = "none";
+  //   }
+  // }, "-=0.4") // 少し重ねる
+
+  // ③左画面が下から登場
+
+  // .from(".left-side", { 
+  //   y: "100%", 
+  //   duration: 1.2, 
+  //   ease: "power4.out"
+  // })
+
+  // ④右画面が少し遅れて下から登場
+  // .from(".right-side", { 
+  //   y: "100%", 
+  //   duration: 1.2, 
+  //   ease: "power4.out"
+  // }, "-=0.6") // 0.6秒遅らせる
+
+  // ⑤中央に白文字をフェードイン
+  // .to(".main-text", { 
+  //   opacity: 1, 
+  //   duration: 1, 
+  //   ease: "power2.out"
+  // })
+
+  // ⑥白文字が消えてスライダーを表示
+  // .to(".main-text", { 
+  //   opacity: 0, 
+  //   duration: 1, 
+  //   ease: "power2.out",
+  //   onComplete: () => {
+  //     console.log("スライダー表示");
+  //   }
+  // });
+  // });
+
+  // gsap.fromTo(".top-mv",
+  //   { opacity:1, backgroundColor: white }, 
+  //   { })
 });
 
 // キャンペーンページタグ

@@ -46,18 +46,5 @@
 	}
 }
 
-.price-page__lists-item {
-	scroll-margin-top: 15vh;/* 画面の15％スクロールを調整 */
-}
-
-.price-page__lists-item + .price-page__lists-item {
-	margin-top: rem(40);
-
-	@include mq("md") {
-		margin-top: rem(80);
-	}
-}
-
-
 
 

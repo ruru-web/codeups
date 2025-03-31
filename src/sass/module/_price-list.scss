@@ -1,5 +1,6 @@
 @use 'global' as *;
 
+//topページ
 .price-list {
 
 
@@ -8,7 +9,6 @@
 .price-list__list + .price-list__list {
   margin-top: rem(40);
 }
-
 
 .price-list__title {
 	font-size: rem(16);
