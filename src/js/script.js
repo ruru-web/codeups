@@ -200,14 +200,16 @@ jQuery(function ($) {
   tl.fromTo(
     ".loading-img",
     { y: "100%" },
-    { y: "0%", duration: 0.8, stagger: 0.2, ease: "power4.out" }
+    // { y: "0%", duration: 0.8, stagger: 0.2, ease: "power4.out" }
+    { y: "0%", duration: 0.8, stagger: 0.2, ease: "power3.out" }
   );
 
   // ④テキスト再表示(色変更)
   tl.fromTo(
     ".loading-title",
     { opacity: 0, y: 100 },
-    { opacity: 1, y: 0, color: "#fff", duration: 0.5, ease: "power3.out" }
+    // { opacity: 1, y: 0, color: "#fff", duration: 0.5, ease: "power2.in" }
+    { opacity: 1, y: 0, color: "#fff", duration: 0.7, ease: "power3.out" }
   );
 
   // ⑤ ローディング画面をフェードアウト
@@ -216,8 +218,9 @@ jQuery(function ($) {
     { opacity: 1 },
     {
       opacity: 0,
-      duration: 0.7,
-      ease: "power2.out",
+      duration: 0.5,
+      // ease: "power2.out",
+      ease: "power3.out",
       onComplete: () => {
         document.querySelector(".loading").remove();
         document.body.classList.remove("loading-active"); // 忘れずに解除！
