@@ -1,0 +1,98 @@
+@use 'global' as *;
+
+.wp-pagenavi {
+	display: flex;
+	gap: rem(12);
+	justify-content: center;
+	color: $green;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+
+  padding: rem(8) rem(13);
+  color: $green;
+	border: rem(1) solid $green;
+	font-size: rem(16);
+	line-height: calc(19/16);
+	font-weight: $bold;
+	font-family: "Lato", sans-serif;
+	background-color: $white;
+	width: rem(38);
+	height: rem(37);
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+}
+
+.wp-pagenavi a:hover {
+  background-color: $green;
+	color: $white;
+	opacity: 1;
+}
+
+.wp-pagenavi span.current {
+  background-color: $green;
+  color: $white;
+  // font-weight: normal;
+}
+
+
+.wp-pagenavi a.first,
+.wp-pagenavi a.last {
+	position: relative;
+	width: rem(36);
+	height: rem(38);
+	padding: rem(10) rem(19);
+}
+
+.wp-pagenavi a.first {
+	margin-right: rem(27);
+}
+
+.wp-pagenavi a.last {
+	margin-left: rem(27);
+}
+
+
+// blog詳細
+.wp-pagenavi a.first--only {
+	margin-right: rem(34);
+}
+
+.wp-pagenavi a.last--only {
+	margin-left: rem(34);
+}
+
+
+.wp-pagenavi a.first::before {
+	content: "";
+	position: absolute;
+	top: rem(12);
+	left: rem(15);
+	width: rem(13);
+	height: rem(13);
+	border-top: rem(1) solid $green;
+	border-left: rem(1) solid $green;
+	transform: rotate(-45deg);
+}
+
+.wp-pagenavi a.last::before {
+	content: "";
+	position: absolute;
+	top: rem(12);
+	right: rem(15);
+	width: rem(13);
+	height: rem(13);
+	border-top: rem(1) solid $green;
+	border-right: rem(1) solid $green;
+	transform: rotate(45deg);
+}
+
+.wp-pagenavi a.first:hover::before {
+	border-top: rem(1) solid $white;
+	border-left: rem(1) solid $white;
+}
+.wp-pagenavi a.last:hover::before {
+	border-top: rem(1) solid $white;
+	border-right: rem(1) solid $white;
+}
+

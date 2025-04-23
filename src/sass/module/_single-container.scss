@@ -1,0 +1,108 @@
+@use 'global' as *;
+
+.single-container__date {
+	font-size: rem(14);
+	line-height: calc(18/14);
+	font-weight: $regular;
+	color: $green2;
+}
+
+.single-container__title {
+	margin-top: rem(8);
+	font-size: rem(24);
+	line-height: calc(29/24);
+	font-weight: $medium;
+	color: $green2;
+	font-family: "Noto Sans JP", sans-serif;
+	padding-bottom: rem(6);
+	border-bottom: 1px solid $green;
+
+	@include mq("md") {
+		font-size: rem(32);
+		line-height: calc(38/32);
+		padding-bottom: rem(2);
+	}
+}
+
+.single-container__image {
+	margin-top: rem(24);
+	width: 100%;
+
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+.single-container__image img {
+	aspect-ratio: 700/468;
+	object-fit: cover;
+	width: 100%;
+}
+
+.single-container__content p {
+	margin-top: rem(24);
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-weight: $regular;
+	color: $black;
+	font-family: "Noto Sans JP", sans-serif;
+
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+.single-container__content img {
+	margin-top: rem(24);
+	aspect-ratio: 700/468;
+	object-fit: cover;
+	width: 100%;
+
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+.single-container__content ul {
+	margin-top: rem(24);
+	font-size: rem(16);
+	line-height: calc(24/16);
+	font-weight: $regular;
+	color: $black;
+	font-family: "Noto Sans JP", sans-serif;
+
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+.single-container__content li {
+	position: relative;
+	padding-left: rem(27);
+}
+
+.single-container__content li + li {
+	margin-top: rem(4);
+}
+
+.single-container__content li::before {
+	position: absolute;
+	top: rem(3);
+	left: rem(0);
+	content: "";
+	background-image: url(../images/common/icon-starfish-green.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	// flex-shrink: 0;
+	height: rem(18);
+	width: rem(18);
+}
+
+.single-container__pagination {
+	margin-top: rem(40);
+
+	@include mq("md") {
+		margin-top: rem(80);
+	}
+}

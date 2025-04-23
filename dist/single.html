@@ -302,18 +302,19 @@
         </div>
       </div>
 
-      <!-- blog詳細 -->
-      <section class="single-body single-body-layout blog-page-detail blog-page-detail-layout">
-        <div class="single-body__inner inner">
-          <div class="single-body__main">
-            <time datetime="2023-11-17" class="single-body__date"
+      <!-- blog詳細 blogページと同じ構造 -->
+      <section class="blog-page blog-page-layout">
+      <!-- <section class="single-body single-body-layout blog-page-detail blog-page-detail-layout"> -->
+        <div class="blog-page__inner inner">
+          <div class="blog-page__main single-container">
+            <time datetime="2023-11-17" class="single-container__date"
               >2023.11/17</time
             >
-            <h1 class="single-body__title">ライセンス取得</h1>
-            <div class="single-body__image">
+            <h1 class="single-container__title">ライセンス取得</h1>
+            <div class="single-container__image">
               <img src="./assets/images/common/blog1.jpg" alt="赤いサンゴ礁" />
             </div>
-            <div class="single-body__content">
+            <div class="single-container__content">
               <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
 
               <div>
@@ -332,20 +333,29 @@
             </div>
 
             <!-- ページネーション -->
-            <div class="single-body__pagination">
-              <div class="pagination pagination-single">
+            <div class="single-container__pagination">
+
+              <div class="wp-pagenavi">
+                <a href="#" class="first first--only"></a>
+                <a href="#" class="last last--only"></a>
+              </div>
+
+
+
+
+              <!-- <div class="pagination pagination-single">
                 <div class="pagination__list pagination__list--left">
                   <a href="#"></a>
                 </div>
                 <div class="pagination__list pagination__list--right">
                   <a href="#"></a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
           <!-- サイドバー -->
-          <div class="single-body__side sidebar">
+          <div class="blog-page__side sidebar">
             <!-- 人気記事 -->
             <div class="sidebar__wrap">
               <div class="sidebar__title-wrap">
@@ -509,48 +519,52 @@
               <div class="sidebar__contents archive">
                 <ul class="archive__list archive-list">
                   <li class="archive-list__item">
-                    <span class="archive-list__toggle toggle-btn">▶</span>
-                    <span>2023</span>
+                    <div class="archive-list__year">
+                      <span class="archive-list__toggle">▶</span>
+                      <span>2023</span>
+                    </div>
                     <ul class="archive-list__month">
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>3月</span>
                         </a>
                       </li>
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>2月</span>
                         </a>
                       </li>
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>1月</span>
                         </a>
                       </li>
                     </ul>
                   </li>
                   <li class="archive-list__item">
-                    <span class="archive-list__toggle toggle-btn">▶</span>
-                    <span>2022</span>
+                    <div class="archive-list__year">
+                      <span class="archive-list__toggle">▶</span>
+                      <span>2022</span>
+                    </div>
                     <ul class="archive-list__month">
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>3月</span>
                         </a>
                       </li>
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>2月</span>
                         </a>
                       </li>
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>1月</span>
                         </a>
                       </li>
@@ -565,7 +579,7 @@
 
       <!-- address/contact -->
       <section
-        class="campaign-page-contact campaign-page-contact-layout contact"
+        class="single-page-contact top-contact-layout contact"
       >
         <div class="contact__inner inner">
           <div class="contact__container">

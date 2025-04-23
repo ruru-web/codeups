@@ -23,15 +23,23 @@
 	color: #007b7b;
 }
 
-.archive-list__year::hover {
+.archive-list__year {
+	cursor: pointer; // カーソルをポインターにしてクリック感
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+	transition: opacity 0.3s ease;
+}
+
+.archive-list__year:hover {
 	opacity: 0.7;
-	transition: 0.3s;
 }
 
 .archive-list__month {
 	display: none;
 	margin-left: rem(24);
 	cursor: pointer;
+
 }
 
 .archive-list__month:first-child {

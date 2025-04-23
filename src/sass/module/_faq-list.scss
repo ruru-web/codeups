@@ -1,5 +1,10 @@
 @use 'global' as *;
 
-.faq-lists__item + .faq-lists__item {
-	margin-top: rem(40);
+.faq-list {
+	display: grid;
+	gap: rem(40);
 }
+
+// .faq-list__item + .faq-list__item {
+// 	margin-top: rem(40);
+// }

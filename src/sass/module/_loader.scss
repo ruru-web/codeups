@@ -5,17 +5,16 @@
 	z-index: 10000;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
+
 	background-color: #fff;
-	display: flex;
+	// display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
-// .top-mv__title-wrap--green {
-// 	color: $green;
-// }
 .loading-title {
 	position: absolute;
 	z-index: 10;
@@ -34,37 +33,39 @@
 	}
 }
 
-
-
-
-//mv全体を覆う
-.main-view {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-}
-
 //左右に分割されたエリア
-.left-side, .right-side {
-	width: 50%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-
-}
 
 .loading-img {
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;/* 画像を全体にフィット */
+	background-position: center;
   transform: translateY(100%); /* 下に隠す */
 }
 
 .left-side {
-	background-color: skyblue;
+	// background-color: skyblue;
+	background-image: url(../images/common/top-mv1-sp.jpg);
+	clip-path: inset(0 50% 0 0); /* 左側を表示 */
+	// clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+
+	@include mq("md") {
+		background-image: url(../images/common/top-mv1-pc.jpg);
+	}
 }
 .right-side {
-	background-color: yellowgreen;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	// background-color: yellowgreen;
+	background-image: url(../images/common/top-mv1-sp.jpg);
+	clip-path: inset(0 0 0 50%); /* 右側を表示 */
+	// clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+
+	@include mq("md") {
+		background-image: url(../images/common/top-mv1-pc.jpg);
+	}
 }
 
 // .loader {

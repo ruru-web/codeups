@@ -12,7 +12,7 @@
 	}
 }
 
-.blog-cards-2cl {
+.blog-cards--2cl {
 
 	@include mq("md") {
 		grid-template-columns: repeat(2, 1fr);

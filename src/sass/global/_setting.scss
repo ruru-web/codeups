@@ -27,7 +27,13 @@ body {
   font-family: $base-font-family;
   // scroll-behavior: smooth; //reset.scssで設定済み
   position: relative;
-  // height: 100%;
+  // overflow: hidden;
+  height: 100%;
+}
+
+body.loading-active {
+  overflow: hidden;
+  height: 100vh;
 }
 
 // フォントウェイト

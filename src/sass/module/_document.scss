@@ -67,12 +67,64 @@
 }
 
 
-.document__contents + .document__contents {
+// .document__contents + .document__contents {
+// 	margin-top: rem(32);
+// }
+
+// .document__number {
+// 	padding-left: 23px;
+// 	list-style-type: decimal;
+// }
+
+.document__content {
+	margin-top: 44px;
+}
+
+// .document__content p {
+// 	// margin-top: 32px;
+// }
+
+.document__content ol {
 	margin-top: rem(32);
 }
 
-.document__number {
-	padding-left: 23px;
-	list-style-type: decimal;
+.document__content ol {
+	counter-reset: item;   /* 番号を0からスタートさせる */
+	list-style: none; /* ブラウザが自動でつける番号を消す */
 }
 
+.document__content ol > li {
+	position: relative;
+	padding-left: rem(24);/* 番号の分、左にスペースをつける */
+	// margin-bottom: 1em;
+	// line-height: 1.7;
+	line-height: 2;
+}
+
+.document__content ol > li::before {
+	content: counter(item) "."; /* 1. 2. 3. を表示する */
+	counter-increment: item; /* 番号を1つずつ増やす */
+	position: absolute;/* 左上に番号を表示する位置を固定 */
+	left: rem(5);
+	top: 0;
+	// font-weight: bold;
+	color: $green2;
+}
+
+.document__content ul {
+	margin-top: rem(8);
+	padding-left: rem(24);
+	list-style: disc;
+}
+
+body.privacy-policy {
+  .document__content ol > li:nth-of-type(3),
+  .document__content ol > li:nth-of-type(4),
+  .document__content ol > li:nth-of-type(5) {
+  	margin-top: rem(32);
+	}
+}
+
+.document__content p:last-of-type {
+	margin-top: rem(32);
+}

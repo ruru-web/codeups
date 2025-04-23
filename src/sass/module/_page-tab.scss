@@ -1,10 +1,8 @@
 @use 'global' as *;
 
-.page-tab {
-	// display: flex;
-}
 
-.page-tab__menu {
+
+.page-tab {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: rem(16) rem(20);
@@ -16,7 +14,7 @@
 	}
 }
 
-.page-tab__menu-item {
+.page-tab__item {
 	height: rem(34);
 	font-size: rem(14);
 	line-height: calc(22/14);
@@ -35,24 +33,24 @@
 	}
 }
 
-.page-tab__menu-item a {
+.page-tab__item a {
 	opacity: 1;
 	// transition: 3s;
 }
 
-.page-tab__menu-item.is-active {
+.page-tab__item.is-active {
 	color: $white;
 	background-color: $green;
 }
 
-.page-tab__menu-item:hover {
+.page-tab__item:hover {
 	background-color: $green;
 	color: $white;
 
 	
 }
 
-.page-tab__menu-item a {
+.page-tab__item a {
 	display: block;
 	padding: rem(6);
 }

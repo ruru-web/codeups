@@ -301,21 +301,21 @@
       <section class="campaign-page campaign-page-layout">
         <div class="campaign-page__inner inner">
           <!-- tab -->
-          <div class="campaign-page__tab page-tab">
-            <ul class="page-tab__menu">
+          <div class="campaign-page__tab">
+            <ul class="page-tab">
               <li
-                class="page-tab__menu-item is-active"
+                class="page-tab__item is-active"
                 data-number="tab01"
               >
                 <a href="">ALL</a>
               </li>
-              <li class="page-tab__menu-item" data-number="tab02">
+              <li class="page-tab__item" data-number="tab02">
                 <a href="">ライセンス講習</a>
               </li>
-              <li class="page-tab__menu-item" data-number="tab03">
+              <li class="page-tab__item" data-number="tab03">
                 <a href="">体験ダイビング</a>
               </li>
-              <li class="page-tab__menu-item" data-number="tab04">
+              <li class="page-tab__item" data-number="tab04">
                 <a href="">ファンダイビング</a>
               </li>
             </ul>
@@ -463,9 +463,21 @@
 
           <!-- ページネーション -->
           <div
-            class="campaign-page__pagination campaign-page__pagination-layout"
+            class="campaign-page__pagination"
           >
-            <div class="pagination">
+            <div class="wp-pagenavi">
+              <a href="#" class="first"></a>
+              <span href="#" class="page current">1</span>
+              <a href="#" class="page">2</a>
+              <a href="#" class="page">3</a>
+              <a href="#" class="page">4</a>
+              <a href="#" class="page u-desktop">5</a>
+              <a href="#" class="page u-desktop">6</a>
+              <a href="#" class="last"></a>
+            </div>
+            
+            <!-- 元データ -->
+            <!-- <div class="pagination">
               <div class="pagination__list pagination__list--left">
                 <a href="#"></a>
               </div>
@@ -494,14 +506,14 @@
               <div class="pagination__list pagination__list--right">
                 <a href="#"></a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
 
       <!-- address/contact -->
       <section
-        class="campaign-page-contact campaign-page-contact-layout contact"
+        class="campaign-page-contact top-contact-layout contact"
       >
         <div class="contact__inner inner">
           <div class="contact__container">

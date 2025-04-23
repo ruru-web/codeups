@@ -1,20 +1,25 @@
 @use 'global' as *;
 
 .menu-list {
+	display: grid;
+	gap: rem(40);
 
+	@include mq("md") {
+		gap: rem(80);
+	}
 }
 
 .menu-list__item {
 	scroll-margin-top: 15vh;/* 画面の15％スクロールを調整 */
 }
 
-.menu-list__item + .menu-list__item {
-	margin-top: rem(40);
+// .menu-list__item + .menu-list__item {
+// 	margin-top: rem(40);
 
-	@include mq("md") {
-		margin-top: rem(80);
-	}
-}
+// 	@include mq("md") {
+// 		margin-top: rem(80);
+// 	}
+// }
 
 
 

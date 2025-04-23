@@ -3,18 +3,19 @@
 .voice-cards {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: rem(40);
+	gap: rem(80) rem(40);
 	@include mq("md") {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-.voice-cards-2cl {
-	@include mq("md") {
-		column-gap: rem(40);
-		row-gap: rem(80);
-	}
-}
+//↓topページのcardsにgap: 80px 40px;をデフォルト設定
+// .voice-cards--2cl {
+// 	@include mq("md") {
+// 		column-gap: rem(40);
+// 		row-gap: rem(80);
+// 	}
+// }
 
 // .voice-cards__item {
 // 	margin: 0 auto;

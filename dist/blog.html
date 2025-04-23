@@ -298,8 +298,7 @@
       <section class="blog-page blog-page-layout">
         <div class="blog-page__inner inner">
           <div class="blog-page__main">
-            <div class="blog-page__cards blog-cards blog-cards-2cl">
-            <!-- <div class="blog-page__cards blog-page-cards"> -->
+            <div class="blog-page__cards blog-cards blog-cards--2cl">
               <div class="blog-cards__item">
                 <a href="single.html" class="blog-card">
                   <div class="blog-card__image">
@@ -494,7 +493,20 @@
 
             <!-- ページネーション -->
             <div class="campaign-page__pagination">
-              <div class="pagination">
+
+              <div class="wp-pagenavi">
+                <a href="#" class="first"></a>
+                <span href="#" class="page current">1</span>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <a href="#" class="page">4</a>
+                <a href="#" class="page u-desktop">5</a>
+                <a href="#" class="page u-desktop">6</a>
+                <a href="#" class="last"></a>
+              </div>
+
+              <!-- 元データ -->
+              <!-- <div class="pagination">
                 <div class="pagination__list pagination__list--left">
                   <a href="#"></a>
                 </div>
@@ -523,7 +535,7 @@
                 <div class="pagination__list pagination__list--right">
                   <a href="#"></a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -692,48 +704,52 @@
               <div class="sidebar__contents archive">
                 <ul class="archive__list archive-list">
                   <li class="archive-list__item">
-                    <span class="archive-list__toggle toggle-btn">▶</span>
-                    <span>2023</span>
+                    <div class="archive-list__year">
+                      <span class="archive-list__toggle">▶</span>
+                      <span>2023</span>
+                    </div>
                     <ul class="archive-list__month">
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>3月</span>
                         </a>
                       </li>
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>2月</span>
                         </a>
                       </li>
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>1月</span>
                         </a>
                       </li>
                     </ul>
                   </li>
                   <li class="archive-list__item">
-                    <span class="archive-list__toggle toggle-btn">▶</span>
-                    <span>2022</span>
+                    <div class="archive-list__year">
+                      <span class="archive-list__toggle">▶</span>
+                      <span>2022</span>
+                    </div>
                     <ul class="archive-list__month">
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>3月</span>
                         </a>
                       </li>
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>2月</span>
                         </a>
                       </li>
                       <li class="archive-list__item-month">
                         <a href="">
-                          <span class="archive-list__toggle toggle-btn">▶</span>
+                          <span class="archive-list__toggle">▶</span>
                           <span>1月</span>
                         </a>
                       </li>
@@ -748,7 +764,7 @@
 
       <!-- address/contact -->
       <section
-        class="campaign-page-contact campaign-page-contact-layout contact"
+        class="blog-page-contact top-contact-layout contact"
       >
         <div class="contact__inner inner">
           <div class="contact__container">
